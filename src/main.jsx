@@ -82,11 +82,329 @@ function ContactForm({ compact = false }) {
   </form>;
 }
 
+const COLLABORATION_ROLES = ["Facilitator", "HR Consultant", "Fractional CXO"];
+const EXPERTISE_AREAS = [
+  "Leadership development", "Executive and team coaching", "Strategy and culture",
+  "Organisation design and OD", "Talent, performance and capability",
+  "Change and transformation", "HR strategy and operating model",
+  "Futures and design thinking", "Other"
+];
+const LAUNCHPAD_AREAS = [
+  "Learning Experiences & Leadership",
+  "Podcasting, Writing & Storytelling",
+  "Brand, Digital Marketing & Community Growth",
+  "Business, Client Work & New Ideas"
+];
+
+function FormField({ label, required = false, hint, children, className = "" }) {
+  return (
+    <div className={`application-field ${className}`}>
+      <span>{label}{required && <b> *</b>}</span>
+      {children}
+      {hint && <small>{hint}</small>}
+    </div>
+  );
+}
+
+function FormSection({ eyebrow, title, description, children }) {
+  return (
+    <section className="application-section">
+      <div className="application-section-heading">
+        <span>{eyebrow}</span>
+        <h2>{title}</h2>
+        {description && <p>{description}</p>}
+      </div>
+      <div className="application-fields">{children}</div>
+    </section>
+  );
+}
+
+function WordCountField({ name, label, required = false, hint, minWords = 0, maxWords = 1000, rows = 5 }) {
+  const [value, setValue] = useState("");
+  const count = value.trim() ? value.trim().split(/\s+/).length : 0;
+  return (
+    <FormField label={label} required={required} hint={hint} className="field-full">
+      <textarea
+        name={name}
+        rows={rows}
+        value={value}
+        onChange={(event) => setValue(event.target.value)}
+        required={required}
+        maxLength={maxWords * 12}
+        placeholder="Write your response here..."
+      />
+      <small className={count > maxWords ? "word-count over-limit" : "word-count"}>
+        {count} words{minWords ? ` · aim for ${minWords}–${maxWords}` : ""}
+      </small>
+    </FormField>
+  );
+}
+
+function ChoiceGroup({ name, options, max = 4, required = false, firstChoice = false }) {
+  const [selected, setSelected] = useState([]);
+  const [first, setFirst] = useState("");
+  const toggle = (option) => {
+    setSelected((current) => {
+      if (current.includes(option)) {
+        if (first === option) setFirst("");
+        return current.filter((item) => item !== option);
+      }
+      if (current.length >= max) return current;
+      return [...current, option];
+    });
+  };
+
+  return (
+    <div className="choice-group">
+      <div className="choice-grid">
+        {options.map((option) => (
+          <div className={`choice-card ${selected.includes(option) ? "selected" : ""}`} key={option}>
+            <label>
+              <input
+                type="checkbox"
+                name={name}
+                value={option}
+                checked={selected.includes(option)}
+                onChange={() => toggle(option)}
+                required={required && selected.length === 0}
+              />
+              <span>{option}</span>
+            </label>
+            {firstChoice && (
+              <label className="first-choice">
+                <input
+                  type="radio"
+                  name={`${name}_first_choice`}
+                  value={option}
+                  checked={first === option}
+                  disabled={!selected.includes(option)}
+                  onChange={() => setFirst(option)}
+                />
+                First choice
+              </label>
+            )}
+          </div>
+        ))}
+      </div>
+      <small className="choice-limit">Choose up to {max}. {selected.length}/{max} selected.</small>
+    </div>
+  );
+}
+
+function UploadField({ name, label, required = false, optional = false }) {
+  const [fileName, setFileName] = useState("");
+  const [error, setError] = useState("");
+  const handleFile = (event) => {
+    const file = event.target.files?.[0];
+    setError("");
+    if (!file) {
+      setFileName("");
+      return;
+    }
+    const allowed = /\.(pdf|doc|docx)$/i.test(file.name);
+    if (!allowed) {
+      setError("Please upload a PDF or Word document.");
+      event.target.value = "";
+      setFileName("");
+      return;
+    }
+    if (file.size > 5 * 1024 * 1024) {
+      setError("The file must be 5 MB or smaller.");
+      event.target.value = "";
+      setFileName("");
+      return;
+    }
+    setFileName(file.name);
+  };
+
+  return (
+    <FormField label={label} required={required} hint="PDF or Word, up to 5 MB." className="field-full">
+      <input
+        className="file-input"
+        type="file"
+        name={name}
+        accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        required={required}
+        onChange={handleFile}
+      />
+      {fileName && <small className="file-selected">Selected: {fileName}</small>}
+      {optional && <small>Optional</small>}
+      {error && <small className="field-error">{error}</small>}
+    </FormField>
+  );
+}
+
+function ApplicationPage({ type }) {
+  const isCollaborate = type === "collaborate";
+
+  return (
+    <div className="application-page">
+      <Header onContact={() => { window.location.href = "/#contact"; }} />
+      <main>
+        <section className="application-hero">
+          <div className="application-hero-inner">
+            <span className="eyebrow light">
+              {isCollaborate ? "COLLABORATE WITH CAREER SHIFTS · EXPRESSION OF INTEREST" : "CAREER SHIFTS LAUNCHPAD · APPLICATION"}
+            </span>
+            <h1>{isCollaborate ? <>Tell Us Where<br /><em>You Add The Most.</em></> : <>Start Here.<br /><em>Tell Us How You Think.</em></>}</h1>
+            <p>
+              {isCollaborate
+                ? "Career Shifts works with a small network of experienced facilitators, HR consultants and fractional CXOs on client projects in leadership, culture and organisation. This takes about ten minutes. Every response is read personally and answered within 2 business days."
+                : "A chance to learn by doing, take ownership of real work and make a contribution people can see. We value clear thinking, curiosity and follow-through over a perfectly polished résumé."}
+            </p>
+            {isCollaborate ? (
+              <div className="application-good-to-know">
+                <b>GOOD TO KNOW</b>
+                <p>Joining the network is not an exclusivity arrangement. You stay independent. Scope and commercial terms are agreed in writing for each engagement, before any work begins.</p>
+              </div>
+            ) : (
+              <div className="application-good-to-know">
+                <b>THE OPPORTUNITY</b>
+                <p>12 weeks. Full-time. Bengaluru hybrid. Attractive stipend. Real projects across learning, content, podcasting, marketing and business growth. A longer-term role may be considered based on contribution, mutual fit and business needs. It is not guaranteed.</p>
+              </div>
+            )}
+          </div>
+        </section>
+
+        <div className="application-container">
+          {typeof window !== "undefined" && new URLSearchParams(window.location.search).get("submitted") === "true" && (
+            <div className="application-success" role="status">
+              Thank you. Your application has been submitted to Career Shifts.
+            </div>
+          )}
+          <form
+              className="long-application-form"
+              action="https://formsubmit.co/connect@careershifts.in"
+              method="POST"
+              encType="multipart/form-data"
+            >
+              <input type="hidden" name="_subject" value={isCollaborate ? "New Collaborate Expression of Interest — Career Shifts" : "New Launchpad Application — Career Shifts"} />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="true" />
+              <input
+                type="hidden"
+                name="_next"
+                value={typeof window !== "undefined" ? `${window.location.origin}${window.location.pathname}?submitted=true` : ""}
+              />
+              <input type="hidden" name="applicationType" value={isCollaborate ? "Collaborate Expression of Interest" : "Launchpad Application"} />
+              <div className="application-required-note">Fields marked <b>*</b> are required.</div>
+
+              <FormSection eyebrow="01 / ABOUT YOU" title="Let’s begin with the basics.">
+                <FormField label="Full Name" required><input name="fullName" autoComplete="name" required /></FormField>
+                <FormField label="Email Address" required><input name="email" type="email" autoComplete="email" required /></FormField>
+                <FormField label="Phone / WhatsApp" required><input name="phone" type="tel" autoComplete="tel" required /></FormField>
+                <FormField label="Current City" required><input name="currentCity" required /></FormField>
+                <FormField label={isCollaborate ? "LinkedIn Profile" : "LinkedIn Profile Or Portfolio URL"}><input name="linkedinOrPortfolio" type="url" placeholder="https://" /></FormField>
+                {isCollaborate && <FormField label="Website Or Portfolio"><input name="website" type="url" placeholder="https://" /></FormField>}
+                <UploadField name="cv" label={isCollaborate ? "Profile Or CV" : "CV / Résumé"} required />
+              </FormSection>
+
+              {isCollaborate ? (
+                <>
+                  <FormSection eyebrow="02 / HOW YOU WOULD COLLABORATE" title="Where do you sit in the network?" description="Choose up to two.">
+                    <FormField label="I Am A" required className="field-full">
+                      <ChoiceGroup name="collaborationRoles" options={COLLABORATION_ROLES} max={2} required />
+                    </FormField>
+                    <FormField label="Your current role and organisation" required hint="Write “Independent” if you work on your own."><input name="currentRoleOrganisation" required /></FormField>
+                    <FormField label="Years of relevant experience" required><input name="yearsExperience" type="number" min="0" max="60" required /></FormField>
+                    <FormField label="Where are you based, and where can you deliver?" required hint="Cities, remote, or willingness to travel." className="field-full"><textarea name="deliveryLocations" rows="3" required /></FormField>
+                  </FormSection>
+
+                  <FormSection eyebrow="03 / YOUR EXPERTISE" title="What are you known for?">
+                    <FormField label="Areas Of Strength" required hint="Choose up to four." className="field-full">
+                      <ChoiceGroup name="expertiseAreas" options={EXPERTISE_AREAS} max={4} required />
+                    </FormField>
+                    <FormField label="Industries you know best"><input name="industries" /></FormField>
+                    <FormField label="Certifications and tools" hint="For example ICF, Hogan, LEGO® Serious Play®, Prosci, ODCP."><input name="certificationsTools" /></FormField>
+                    <WordCountField name="strongestWork" label="Describe your strongest area of work and what makes you different." required minWords={100} maxWords={150} />
+                  </FormSection>
+
+                  <FormSection eyebrow="04 / EVIDENCE OF WORK" title="Show us the work." description="NDA-safe is fine. You do not need to name clients.">
+                    <WordCountField name="proudEngagement" label="Tell us about an engagement you are proud of. What was your role, and what changed?" required rows={6} />
+                    <FormField label="Clients or organisations you have worked with" className="field-full"><textarea name="clientsOrganisations" rows="3" /></FormField>
+                    <FormField label="One work sample, link or deck" required hint="Paste a link, or write “Attached” and send the file with your application." className="field-full"><input name="workSampleLink" required placeholder="https:// or Attached" /></FormField>
+                    <UploadField name="workSampleFile" label="Attach A Work Sample (Optional)" optional />
+                  </FormSection>
+
+                  <FormSection eyebrow="05 / WORKING TOGETHER" title="What would good look like?">
+                    <FormField label="What kinds of briefs do you most want to work on?" required className="field-full"><textarea name="preferredBriefs" rows="4" required /></FormField>
+                    <FormField label="Typical engagement length you prefer"><select name="engagementLength" defaultValue=""><option value="" disabled>Select an option</option><option>Days</option><option>Weeks</option><option>Months</option><option>Fractional retainer</option></select></FormField>
+                    <FormField label="Availability over the next six months" required><select name="availability" defaultValue="" required><option value="" disabled>Select an option</option><option>Immediate</option><option>Within 1–3 months</option><option>Limited</option></select></FormField>
+                    <FormField label="Engagement model you prefer"><select name="engagementModel" defaultValue=""><option value="" disabled>Select an option</option><option>Fixed fee</option><option>Revenue share</option><option>Open to either</option></select></FormField>
+                    <FormField label="How did you hear about Career Shifts?"><input name="referralSource" /></FormField>
+                    <FormField label="Anything else you would like us to know?" className="field-full"><textarea name="additionalInformation" rows="4" /></FormField>
+                  </FormSection>
+                  <div className="application-before-submit"><b>BEFORE YOU SUBMIT</b><p>Make sure every link you share can be opened. Client information you may discuss with us stays confidential, in both directions.</p></div>
+                  <label className="application-consent"><input type="checkbox" name="confidentialityConfirmation" value="yes" required /> I confirm that my answers are my own and that I will treat all client information with complete confidentiality. <b>*</b></label>
+                </>
+              ) : (
+                <>
+                  <FormSection eyebrow="02 / COMMITMENT & LOGISTICS" title="Can we plan around you?" description="Launchpad is full-time for twelve weeks. A short, honest answer helps us plan.">
+                    <FormField label="Can you commit to a full-time, 12-week programme?" required className="field-full">
+                      <div className="radio-options">
+                        <label><input type="radio" name="fullTimeCommitment" value="Yes" required /> Yes</label>
+                        <label><input type="radio" name="fullTimeCommitment" value="No" /> No</label>
+                      </div>
+                    </FormField>
+                    <FormField label="Any Constraint We Should Know About?" className="field-full"><textarea name="constraints" rows="3" /></FormField>
+                    <FormField label="Where are you based, and can you participate in a Bengaluru hybrid arrangement?" required className="field-full"><textarea name="bengaluruHybrid" rows="3" required /></FormField>
+                    <FormField label="When could you start?" required><input name="startDate" type="text" placeholder="e.g. Immediately / 1 December 2026" required /></FormField>
+                  </FormSection>
+
+                  <FormSection eyebrow="03 / YOUR POINT OF VIEW" title="What would you build?" description="There is no single “right” background for Launchpad. Choose the work that genuinely interests you, then tell us how you would approach it.">
+                    <FormField label="Where do you want to contribute?" required hint="Choose up to two areas, and mark your first choice." className="field-full">
+                      <ChoiceGroup name="contributionAreas" options={LAUNCHPAD_AREAS} max={2} required firstChoice />
+                    </FormField>
+                    <WordCountField name="whyLaunchpad" label="Why does this opportunity interest you now? What would make these 12 weeks meaningful for you?" required minWords={100} maxWords={150} />
+                    <WordCountField name="problemToSolve" label="What is one problem in learning, careers, content or growth that you would be excited to help solve? What would you do first?" required minWords={100} maxWords={150} />
+                    <WordCountField name="dayOneContribution" label="What could you contribute from day one, even while you are still learning?" required />
+                  </FormSection>
+
+                  <FormSection eyebrow="04 / EVIDENCE OF OWNERSHIP" title="Show us your thinking." description="Strong applications use real examples. Tell us what you did personally, what changed, and what you learned. Short, honest answers are welcome.">
+                    <WordCountField name="ownershipExample" label="Tell us about something you took from an idea or brief to a finished result. What was your role, what did you do, and what happened?" required />
+                    <WordCountField name="feedbackExample" label="Tell us about feedback that changed how you approached a piece of work. What did you change?" required />
+                  </FormSection>
+
+                  <FormSection eyebrow="05 / A PRACTICAL SITUATION" title="One busy day.">
+                    <WordCountField name="prioritisationScenario" label="You have two important tasks due today. A new urgent request arrives, and you can’t do everything at once. How would you decide what to do, and what would you communicate to the people involved?" required />
+                  </FormSection>
+
+                  <FormSection eyebrow="06 / WORK SAMPLE" title="Make it tangible." description="A sample does not need to be polished or professional work. We want to understand the choices you made, what you learned and how you would make it better.">
+                    <FormField label="Share one work sample that shows how you think or make things." required hint="Paste a link, or write “Attached” and send the file with your application. Make sure every link can be opened." className="field-full"><input name="workSampleLink" required placeholder="https:// or Attached" /></FormField>
+                    <UploadField name="workSampleFile" label="Attach A Work Sample (Optional)" optional />
+                    <WordCountField name="workSampleReflection" label="What was the brief or goal? What part was yours? What would you improve if you had another chance?" required />
+                  </FormSection>
+
+                  <FormSection eyebrow="07 / WHAT COMES NEXT" title="Where do you want to grow?">
+                    <WordCountField name="growthArea" label="What is one skill or area you most want to stretch during Launchpad?" required />
+                    <FormField label="Anything else you would like us to know?" className="field-full"><textarea name="additionalInformation" rows="4" /></FormField>
+                  </FormSection>
+                  <div className="application-before-submit"><b>BEFORE YOU SUBMIT</b><p>Include your CV and make sure every link you share can be opened. Your answers should be your own.</p></div>
+                  <label className="application-consent"><input type="checkbox" name="answersConfirmation" value="yes" required /> I confirm that my answers are my own and that the links I have shared can be opened. <b>*</b></label>
+                </>
+              )}
+
+              <div className="application-submit-row">
+                <button className="button button-red application-submit" type="submit">
+                  {isCollaborate ? "Submit Interest" : "Submit Application"} <span>↗</span>
+                </button>
+                <p>{isCollaborate
+                  ? "Every response is read by a person and answered within 2 business days. Your details are used only for this purpose."
+                  : "Every application is read by a person and every applicant hears back. Your details are used only for Launchpad."}</p>
+              </div>
+            </form>
+        </div>
+      </main>
+      <Footer onContact={() => { window.location.href = "/#contact"; }} />
+    </div>
+  );
+}
+
 function Header({ onContact }) {
   const [open, setOpen] = useState(false);
-  const nav = [["How We Work", "#method"], ["Executive Coaching", "#coaching"], ["Leadership Systems", "#leadership-systems"], ["Leadership Development", "#development"], ["Strategy & Culture", "#strategy-culture"], ["Perspectives", "#perspectives"], ["About", "#about"]];
+  const nav = [["How We Work", "/#method"], ["Leadership Systems", "/#leadership-systems"], ["Leadership Development", "/#development"], ["Strategy & Culture", "/#strategy-culture"], ["Launchpad", "/launchpad"], ["Collaborate", "/collaborate"], ["Perspectives", "/#perspectives"], ["About", "/#about"]];
   return <header className="site-header">
-    <a className="wordmark" href="#home"><span>career<span className="pink">shifts</span></span><small>CONSULTING</small></a>
+    <a className="wordmark" href="/"><span>career<span className="pink">shifts</span></span><small>CONSULTING</small></a>
     <button className="mobile-toggle" onClick={() => setOpen(!open)} aria-label="Toggle menu">{open ? "×" : "☰"}</button>
     <nav className={open ? "nav-links open" : "nav-links"}>
       {nav.map(([label, href]) => <a key={label} href={href} onClick={() => setOpen(false)}>{label}</a>)}
@@ -96,9 +414,9 @@ function Header({ onContact }) {
 }
 function Footer({ onContact }) {
   return <footer className="footer"><div className="footer-top">
-    <div><a className="wordmark footer-mark" href="#home"><span>career<span className="pink">shifts</span></span><small>CONSULTING</small></a><p>Leadership and organisational advisory, built on rigorous diagnosis — not off-the-shelf frameworks.</p><small className="footer-motto">FOUNDED IN INDIA. BUILT FOR THE WORLD.</small><div className="footer-socials"><a href="https://www.instagram.com/career.shifts" target="_blank" rel="noreferrer">◎</a><a href="https://x.com/goiyerthecoach" target="_blank" rel="noreferrer">𝕏</a><a href="https://www.linkedin.com/company/career-shifts-consulting/home/" target="_blank" rel="noreferrer">in</a><a href="https://www.youtube.com/@careershifts" target="_blank" rel="noreferrer">▶</a></div></div>
+    <div><a className="wordmark footer-mark" href="/"><span>career<span className="pink">shifts</span></span><small>CONSULTING</small></a><p>Leadership and organisational advisory, built on rigorous diagnosis — not off-the-shelf frameworks.</p><small className="footer-motto">FOUNDED IN INDIA. BUILT FOR THE WORLD.</small><div className="footer-socials"><a href="https://www.instagram.com/career.shifts" target="_blank" rel="noreferrer">◎</a><a href="https://x.com/goiyerthecoach" target="_blank" rel="noreferrer">𝕏</a><a href="https://www.linkedin.com/company/career-shifts-consulting/home/" target="_blank" rel="noreferrer">in</a><a href="https://www.youtube.com/@careershifts" target="_blank" rel="noreferrer">▶</a></div></div>
     <div><b>PRACTICES</b><a href="#leadership-systems">Collective Leadership</a><a href="#development">Leadership Development</a><a href="#coaching">Executive Coaching</a><a href="#strategy-culture">Strategy & Culture</a></div>
-    <div><b>FIRM</b><a href="#method">How We Work</a><a href="#about">About</a><a href="#perspectives">Perspectives</a><a href="#team">Our Network</a></div>
+    <div><b>FIRM</b><a href="#method">How We Work</a><a href="#about">About</a><a href="#perspectives">Perspectives</a><a href="#team">Our Network</a><a href="/launchpad">Launchpad</a><a href="/collaborate">Collaborate</a></div>
     <div><b>CONNECT</b><a href="tel:+917406588111">+91 74065 88111</a><a href="mailto:connect@careershifts.in">connect@careershifts.in</a><a href="https://www.linkedin.com/company/career-shifts-consulting/home/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://www.youtube.com/@careershifts" target="_blank" rel="noreferrer">YouTube ↗</a><button onClick={onContact}>Start a Conversation ↗</button></div>
   </div><div className="footer-bottom"><span>© 2026 Career Shifts Consulting. All rights reserved.</span><span>Leadership · Systems · Organisation</span></div></footer>;
 }
@@ -115,6 +433,8 @@ export default function App() {
     ["Is this confidential?", "Yes. Coaching is conducted under professional coaching ethics and strict confidentiality terms. For organisation-sponsored coaching, boundaries are agreed explicitly before the engagement begins."],
     ["What does the first call look like?", "A 60-minute discovery conversation. No proposal on the table — just genuine inquiry into your situation. The first conversation is valuable in itself."]
   ];
+  if (typeof window !== "undefined" && window.location.pathname.replace(/\/$/, "") === "/collaborate") return <ApplicationPage type="collaborate" />;
+  if (typeof window !== "undefined" && window.location.pathname.replace(/\/$/, "") === "/launchpad") return <ApplicationPage type="launchpad" />;
   return <>
     <a className="skip-link" href="#main">Skip to Main Content</a>
     <Header onContact={() => setModal(true)} />
@@ -173,12 +493,29 @@ export default function App() {
   </>;
 }
 
+function AppRouter() {
+  const path =
+    typeof window !== "undefined"
+      ? window.location.pathname.replace(/\/$/, "") || "/"
+      : "/";
+
+  if (path === "/collaborate") {
+    return <ApplicationPage type="collaborate" />;
+  }
+
+  if (path === "/launchpad") {
+    return <ApplicationPage type="launchpad" />;
+  }
+
+  return <App />;
+}
+
 const rootElement = document.getElementById("root");
 
 if (rootElement) {
   createRoot(rootElement).render(
     <React.StrictMode>
-      <App />
+      <AppRouter />
     </React.StrictMode>
   );
 }
