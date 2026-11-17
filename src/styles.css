@@ -907,3 +907,29 @@ body{font-size:16px}
     padding: 22px 19px;
   }
 }
+
+@media (max-width: 760px) {
+  .contact-modal {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .contact-modal .modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    float: none;
+    margin: 0;
+    padding: 4px;
+
+    z-index: 10;
+    background: transparent;
+    border: none;
+    color: #fff;
+
+    font-size: 30px;
+    line-height: 1;
+  }
+}
