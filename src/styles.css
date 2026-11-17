@@ -765,3 +765,145 @@ body{font-size:16px}
   .application-submit{width:100%}
   .application-success{padding:45px 20px}
 }
+
+
+/* ==========================================
+   MOBILE FIX: CONTACT POPUP SCROLLING
+   ========================================== */
+
+@media (max-width: 760px) {
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 12px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .contact-modal {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+    margin: auto;
+    padding: 38px 22px 28px;
+
+    /* Override the previous overflow:hidden */
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+  }
+
+  .contact-modal h2 {
+    font-size: 34px;
+    line-height: 1.12;
+    margin: 16px 0;
+  }
+
+  .contact-modal > p {
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+
+  .form-grid .full {
+    grid-column: 1;
+  }
+
+  .contact-form input:not([type="checkbox"]),
+  .contact-form textarea {
+    width: 100%;
+    min-height: 50px;
+    font-size: 16px;
+  }
+
+  .contact-form textarea {
+    min-height: 110px;
+  }
+
+  .contact-form .button-red {
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .modal-close {
+    position: sticky;
+    float: right;
+    top: 0;
+    z-index: 5;
+    margin-top: -8px;
+    margin-right: -5px;
+    font-size: 30px;
+  }
+}
+
+/* ==========================================
+   MOBILE FIX: DEVELOPMENT CARDS VERTICAL
+   ========================================== */
+
+@media (max-width: 760px) {
+  .development-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    width: 100%;
+  }
+
+  .development-grid article {
+    width: 100%;
+    min-width: 0;
+    min-height: auto;
+    padding: 25px 23px;
+    border-radius: 18px;
+  }
+
+  .development-grid article > span {
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .development-grid article h3 {
+    font-size: 22px;
+    line-height: 1.35;
+    margin: 0 0 12px;
+    overflow-wrap: break-word;
+  }
+
+  .development-grid article p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+  }
+}
+
+/* Smaller mobile screens */
+@media (max-width: 420px) {
+  .contact-modal {
+    padding: 34px 18px 24px;
+  }
+
+  .contact-modal h2 {
+    font-size: 30px;
+  }
+
+  .development-grid article {
+    padding: 22px 19px;
+  }
+}
