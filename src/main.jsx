@@ -970,11 +970,13 @@ if (typeof window !== "undefined" && window.location.pathname.replace(/\/+$/, ""
 
 
 
-      <section className="section-pad wrap intro-section" id="about"><div><span className="eyebrow">A DIFFERENT KIND OF ADVISORY</span><h2>See what others miss.<br /><em>Shape what comes next.</em></h2></div><div className="intro-copy"><p className="large-copy">Most organisations don't have a strategy problem. They have a leadership system that cannot execute the strategy they have.</p><p>Career Shifts works in the space between what leaders intend and what the organisation experiences. We bring rigorous diagnosis, deep human understanding and systems thinking to the moments when the next move matters most.</p><a className="text-link" href="#method">Explore our approach ↗</a></div></section>
+      <section className="section-pad wrap intro-section" id="about"><div><span className="eyebrow">A DIFFERENT KIND OF ADVISORY</span><h2>See what others miss.<br /><em>Shape what comes next.</em></h2></div><div className="intro-copy"><p className="large-copy">Most organisations don't have a strategy problem. They have a leadership system that cannot execute the strategy they have.</p><p>Career Shifts works in the space between what leaders intend and what the organisation experiences. We bring rigorous diagnosis, deep human understanding and systems thinking to the moments when the next move matters most.</p><a className="button button-red" href="#method">Explore our approach ↗</a></div></section>
 
 
 
-      <section className="metrics-band"><div className="wrap metrics-grid"><div><span className="eyebrow light">THE CASE FOR CHANGE</span><h2>When leadership moves with intent,<br /><em>the whole organisation moves.</em></h2></div><div className="metric"><strong>70%</strong><span>of transformations fail to achieve intended goals</span><small>MCKINSEY</small></div><div className="metric"><strong>3.7×</strong><span>revenue advantage for strong-culture organisations</span><small>DELOITTE</small></div><div className="metric"><strong>788%</strong><span>average ROI reported from executive coaching</span><small>METRIXGLOBAL</small></div></div><div className="wrap metric-disclaimer">Indicative research references. Verify original reports and publication dates before external publication.</div></section>
+      <section className="metrics-band"><div className="wrap metrics-grid"><div><span className="eyebrow light">THE CASE FOR CHANGE</span><h2>When leadership moves with intent,<br /><em>the whole organisation moves.</em></h2></div><div className="metric"><strong>70%</strong><span>of transformations fail to achieve intended goals</span><small>MCKINSEY</small></div><div className="metric"><strong>3.7×</strong><span>revenue advantage for strong-culture organisations</span><small>DELOITTE</small></div><div className="metric"><strong>788%</strong><span>average ROI reported from executive coaching</span><small>METRIXGLOBAL</small></div></div>
+      
+      </section>
 
 
 
@@ -990,7 +992,15 @@ if (typeof window !== "undefined" && window.location.pathname.replace(/\/+$/, ""
 
 
 
-      <section className="section-pad wrap feature-section" id="coaching"><div className="feature-image"><img src={images.founder2} alt="Gopal A. Iyer" loading="lazy" /></div><div className="feature-copy"><span className="eyebrow">FOR INDIVIDUALS</span><h2>Your next chapter<br />isn't found. It's <em>created.</em></h2><p>Most high performers who come to Career Shifts have already diagnosed the problem. What they need is a more rigorous conversation about whether that diagnosis is correct.</p><ul><li>The high performer who has become invisible in their organisation.</li><li>The professional at a genuine crossroads.</li><li>The first-time CXO navigating a new level of leadership.</li><li>The leader returning from a break, rebuilding confidence and momentum.</li></ul><button className="text-link button-link" onClick={() => setModal(true)}>Book a discovery call ↗</button></div></section>
+      <section className="section-pad wrap feature-section" id="coaching"><div className="feature-image"><img src={images.founder2} alt="Gopal A. Iyer" loading="lazy" /></div><div className="feature-copy"><span className="eyebrow">FOR INDIVIDUALS</span><h2>Your next chapter<br />isn't found. It's <em>created.</em></h2><p>Most high performers who come to Career Shifts have already diagnosed the problem. What they need is a more rigorous conversation about whether that diagnosis is correct.</p><ul><li>The high performer who has become invisible in their organisation.</li><li>The professional at a genuine crossroads.</li><li>The first-time CXO navigating a new level of leadership.</li><li>The leader returning from a break, rebuilding confidence and momentum.</li></ul>
+      <button
+  className="button button-red"
+  onClick={() => setModal(true)}
+  type="button"
+>
+  Book a discovery call ↗
+</button>
+      </div></section>
 
 
 
@@ -1029,7 +1039,8 @@ if (typeof window !== "undefined" && window.location.pathname.replace(/\/+$/, ""
 
 
 
-      <section className="section-pad wrap founder-layout" id="founder"><div className="founder-photo"><img src={images.founder} alt="Gopal A. Iyer" loading="lazy" /></div><div><span className="eyebrow">ABOUT THE FOUNDER</span><h2>Built from two decades<br />inside the <em>problem.</em></h2><h3>Gopal A. Iyer</h3><small>FOUNDER & PRINCIPAL ADVISOR · BENGALURU</small><p>For 22+ years, Gopal has worked at the intersection of business transformation, leadership agility and career reinvention. Across Goldman Sachs, Target, Deloitte, EY and IIM Ahmedabad, he partnered with senior leaders to align leadership with strategy, drive cultural transformation and navigate complex change.</p><p>Career Shifts was founded to bridge the gap between potential and execution — helping individuals and businesses break inertia, build momentum and own their future.</p><div className="credentials">ICF PCC · ACTC · EMCC SENIOR PRACTITIONER · HOGAN CERTIFIED · LSP FACILITATOR · PROSCI</div><a className="text-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a></div></section>
+      <section className="section-pad wrap founder-layout" id="founder"><div className="founder-photo"><img src={images.founder} alt="Gopal A. Iyer" loading="lazy" /></div><div><span className="eyebrow">ABOUT THE FOUNDER</span><h2>Built from two decades<br />inside the <em>problem.</em></h2><h3>Gopal A. Iyer</h3><small>FOUNDER & PRINCIPAL ADVISOR · BENGALURU</small><p>For 22+ years, Gopal has worked at the intersection of business transformation, leadership agility and career reinvention. Across Goldman Sachs, Target, Deloitte, EY and IIM Ahmedabad, he partnered with senior leaders to align leadership with strategy, drive cultural transformation and navigate complex change.</p><p>Career Shifts was founded to bridge the gap between potential and execution — helping individuals and businesses break inertia, build momentum and own their future.</p><div className="credentials">ICF PCC · ACTC · EMCC SENIOR PRACTITIONER · HOGAN CERTIFIED · LSP FACILITATOR · PROSCI</div>
+      <a className="button button-red" href="https://www.linkedin.com/company/career-shifts-consulting/home/" target="_blank" rel="noreferrer">Connect on LinkedIn ↗</a></div></section>
 
 
 
@@ -1063,11 +1074,15 @@ if (typeof window !== "undefined" && window.location.pathname.replace(/\/+$/, ""
         </div>
       </section>
 
-      <section className="section-pad podcast-section" id="podcast"><div className="wrap podcast-layout"><div><span className="eyebrow light">CAREER SHIFTS PODCAST</span><h2>The stories you don't hear in boardrooms. <em>But the ones that shape them.</em></h2><p>Conversations with leaders, misfits, change-makers and everyday professionals who chose to rewrite their careers — and sometimes, their lives.</p><a className="button button-outline" href="https://www.youtube.com/" target="_blank" rel="noreferrer">Watch episodes ↗</a></div><img src={images.podcast} alt="Career Shifts Podcast" loading="lazy" /></div></section>
+      <section className="section-pad podcast-section" id="podcast"><div className="wrap podcast-layout"><div><span className="eyebrow light">CAREER SHIFTS PODCAST</span><h2>The stories you don't hear in boardrooms. <em>But the ones that shape them.</em></h2><p>Conversations with leaders, misfits, change-makers and everyday professionals who chose to rewrite their careers — and sometimes, their lives.</p><a className="button button-red" href="https://www.youtube.com/" target="_blank" rel="noreferrer">Watch episodes ↗</a></div><img src={images.podcast} alt="Career Shifts Podcast" loading="lazy" /></div></section>
 
 
 
-      <section className="section-pad wrap tedx-section"><div><span className="eyebrow">IDEAS WORTH SHARING</span><h2>Gopal Iyer on <em>TEDx.</em></h2><p>A perspective on leadership, change and the choices that shape our next chapter.</p><a className="text-link" href="https://www.youtube.com/watch?v=iqOHW2iINh0" target="_blank" rel="noreferrer">Watch the TEDx talk ↗</a></div><a className="video-card" href="https://www.youtube.com/watch?v=iqOHW2iINh0" target="_blank" rel="noreferrer"><img src="https://img.youtube.com/vi/iqOHW2iINh0/hqdefault.jpg" alt="Watch Gopal Iyer's TEDx talk" /><span>▶</span></a></section>
+      <section className="section-pad wrap tedx-section"><div><span className="eyebrow">IDEAS WORTH SHARING</span><h2>Gopal Iyer on <em>TEDx.</em></h2><p>A perspective on leadership, change and the choices that shape our next chapter.</p>
+      
+      <a className="button button-red" href="https://www.youtube.com/watch?v=iqOHW2iINh0" target="_blank" rel="noreferrer">Watch the TEDx talk ↗</a>
+      
+      </div><a className="video-card" href="https://www.youtube.com/watch?v=iqOHW2iINh0" target="_blank" rel="noreferrer"><img src="https://img.youtube.com/vi/iqOHW2iINh0/hqdefault.jpg" alt="Watch Gopal Iyer's TEDx talk" /><span>▶</span></a></section>
 
 
 

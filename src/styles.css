@@ -1708,3 +1708,32 @@ header nav a:hover {
 .footer-socials a:hover svg {
   color: #ffffff;
 }
+
+.credentials {
+  margin-bottom: 16px !important;
+}
+
+.credentials {
+  font-size: 13px !important;
+  letter-spacing: 1.2px !important;
+  line-height: 1.7 !important;
+  padding: 16px 20px !important;
+}
+
+.founder-layout small {
+  font-size: 14px !important;
+  letter-spacing: 1.2px !important;
+  line-height: 1.6 !important;
+}
+
+.testimonial-band small {
+  font-size: 14px !important;
+  letter-spacing: 1.4px !important;
+  line-height: 1.6 !important;
+}
+
+.hero-caption {
+  font-size: 12px !important;
+  letter-spacing: 1.5px !important;
+  line-height: 1.6 !important;
+}
