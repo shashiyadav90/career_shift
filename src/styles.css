@@ -933,3 +933,778 @@ body{font-size:16px}
     line-height: 1;
   }
 }
+
+
+/* Compact checkbox and radio option cards */
+
+.engagement-checkbox,
+.choice-option,
+.option-card,
+.network-option,
+.contribution-option {
+  min-height: 58px !important;
+  padding: 12px 16px !important;
+  gap: 10px !important;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Reduce space between cards */
+.engagement-checkbox-grid,
+.choice-grid,
+.option-grid,
+.network-option-grid,
+.contribution-grid {
+  gap: 10px !important;
+}
+
+/* Slightly smaller checkbox */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 17px !important;
+  height: 17px !important;
+  min-width: 17px !important;
+  min-height: 17px !important;
+  max-width: 17px !important;
+  max-height: 17px !important;
+  flex: 0 0 17px !important;
+}
+
+/* Radio option spacing */
+.radio-group,
+.radio-options,
+.commitment-options {
+  gap: 20px !important;
+}
+
+/* Mobile cards */
+@media (max-width: 650px) {
+  .engagement-checkbox,
+  .choice-option,
+  .option-card,
+  .network-option,
+  .contribution-option {
+    min-height: 54px !important;
+    padding: 11px 14px !important;
+  }
+}
+
+/* Match the lower paragraph to the main paragraph */
+.intro-copy p:not(.large-copy) {
+  font-family: Manrope, sans-serif;
+  font-size: 22px !important;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #001447 !important;
+}
+
+/* Career Shifts Method – white step headings */
+.method-detail h2,
+.method-detail h3,
+.method-detail .method-title {
+  color: #ffffff !important;
+}
+
+/* Method card – red circular accent */
+.method-detail::before,
+.method-detail::after {
+  border-color: #e00051 !important;
+  background-color: rgba(224, 0, 81, 0.12) !important;
+}
+
+/* SEE / SENSE / SHAPE / SHIFT / SUSTAIN descriptions */
+.method-list .method-row > small {
+  color: #263449 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  opacity: 1 !important;
+}
+
+/* Method section description */
+#method .section-title > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+}
+
+/* Practice section – match Method description colour */
+#practices .section-title > p,
+#practices .practice-body > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+}
+
+/* What We Solve – larger white description */
+.problem-section .problem-layout > div:first-child > p {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  font-size: 19px !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+}
+
+/* Coaching section – larger description and dark text */
+#coaching .feature-copy > p,
+#coaching .feature-copy ul,
+#coaching .feature-copy li {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 15px !important;
+  line-height: 1.9 !important;
+}
+
+/* Keep bullet spacing readable */
+#coaching .feature-copy li {
+  margin-bottom: 8px;
+}
+
+/* =========================================
+   EXECUTIVE COACHING – DREAM, DARE, DO
+   ========================================= */
+
+/* Section introduction */
+.coaching-journey .section-title > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+/* Three phase card descriptions */
+.coaching-journey .journey-cards article h4 {
+  color: #263449 !important;
+}
+
+.coaching-journey .journey-cards article p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+/* Hogan note description */
+.coaching-journey .hogan-note > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+
+/* =========================================
+   COLLECTIVE LEADERSHIP & SYSTEMS
+   ========================================= */
+
+/* Main section description */
+#leadership-systems .split-heading > div:last-child > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+/* Six practice card descriptions */
+#leadership-systems .six-grid article p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+/* Signature method descriptions */
+#leadership-systems .signature-method p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+/* Mobile readability */
+@media (max-width: 650px) {
+  .coaching-journey .section-title > p,
+  #leadership-systems .split-heading > div:last-child > p {
+    font-size: 16px !important;
+  }
+
+  .coaching-journey .journey-cards article p,
+  .coaching-journey .hogan-note > p,
+  #leadership-systems .six-grid article p,
+  #leadership-systems .signature-method p {
+    font-size: 15px !important;
+  }
+}
+
+/* =========================================
+   PRACTICE 02 – LEADERSHIP DEVELOPMENT
+   ========================================= */
+
+/* Section introduction */
+#development .section-title > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+/* Development cards */
+#development .development-grid article p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+
+/* =========================================
+   PRACTICE 04 – STRATEGY, CULTURE
+   ========================================= */
+
+/* Main section description */
+#strategy-culture .split-heading > div:last-child > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+/* Strategy list descriptions */
+#strategy-culture .strategy-list > div > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 650px) {
+  #development .section-title > p,
+  #strategy-culture .split-heading > div:last-child > p {
+    font-size: 16px !important;
+  }
+
+  #development .development-grid article p,
+  #strategy-culture .strategy-list > div > p {
+    font-size: 15px !important;
+  }
+}
+
+/* Force separate vertical spacing between strategy boxes */
+#strategy-culture .strategy-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 16px !important;
+  row-gap: 16px !important;
+}
+
+#strategy-culture .strategy-list > div {
+  margin: 0 !important;
+  border-radius: 22px !important;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Remove connecting borders */
+#strategy-culture .strategy-list {
+  border: none !important;
+}
+
+#strategy-culture .strategy-list > div + div {
+  margin-top: 0 !important;
+}
+
+/* =====================================================
+   FOUNDER + TEAM DESCRIPTION READABILITY
+   ===================================================== */
+
+/* Founder description paragraphs */
+#founder.founder-layout p,
+.founder-layout > div > p {
+  color: #263449 !important;
+  font-size: 17px !important;
+  line-height: 1.85 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+  margin-bottom: 22px !important;
+}
+
+/* Team section introduction */
+.people-grid p,
+#people .section-title > p {
+  color: #263449 !important;
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+/* Gopal and Sreelekha profile descriptions */
+.people-grid article p {
+  color: #263449 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  opacity: 1 !important;
+  margin-top: 18px !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 760px) {
+  #founder.founder-layout p,
+  .founder-layout > div > p,
+  .people-grid p,
+  #people .section-title > p,
+  .people-grid article p {
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* =========================================
+   ADVISORY BOARD – DESCRIPTION READABILITY
+   ========================================= */
+
+/* Intro: Experienced leaders bringing... */
+#advisory .section-title > p {
+  color: #263449 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+/* Individual advisory board member descriptions */
+#advisory .people-grid article p,
+#advisory .people-grid p {
+  color: #263449 !important;
+  font-size: 16px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+/* Member roles */
+#advisory .people-grid article small {
+  color: #263449 !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  opacity: 1 !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  #advisory .section-title > p {
+    font-size: 16px !important;
+  }
+
+  #advisory .people-grid article p,
+  #advisory .people-grid article small {
+    font-size: 15px !important;
+  }
+}
+
+/* Podcast section description */
+#podcast .podcast-layout > div > p {
+  color: #ffffff !important;
+  font-size: 19px !important;
+  line-height: 1.85 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+  max-width: 680px;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  #podcast .podcast-layout > div > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* WHAT WE SOLVE – Pink CTA button */
+.problem-section .button.button-outline {
+  background: #e00051 !important;
+  border: 1px solid #e00051 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  box-shadow: 0 10px 25px rgba(224, 0, 81, 0.2);
+  transition: all 0.3s ease;
+}
+
+.problem-section .button.button-outline:hover {
+  background: #c90049 !important;
+  border-color: #c90049 !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* TEDx section description */
+.tedx-section > div > p {
+  color: #263449 !important;
+  font-size: 19px !important;
+  line-height: 1.85 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+  max-width: 680px;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .tedx-section > div > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* =========================================
+   PERSPECTIVES – DESCRIPTION READABILITY
+   ========================================= */
+
+/* Section introduction */
+#perspectives .section-title > p {
+  color: #263449 !important;
+  font-size: 19px !important;
+  line-height: 1.85 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+/* Article descriptions */
+#perspectives .article-grid article > p {
+  color: #263449 !important;
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+/* Article category labels */
+#perspectives .article-grid article > small {
+  color: #263449 !important;
+  opacity: 1 !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  #perspectives .section-title > p {
+    font-size: 16px !important;
+  }
+
+  #perspectives .article-grid article > p {
+    font-size: 15px !important;
+  }
+}
+
+/* =========================================
+   FAQ – ANSWER DESCRIPTION READABILITY
+   ========================================= */
+
+#faq .faq-item p,
+#faq .faq-answer,
+#faq .faq-answer p,
+.faq-section .faq-item p,
+.faq-section .faq-answer p {
+  color: #263449 !important;
+  font-size: 17px !important;
+  line-height: 1.85 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+/* FAQ answer spacing */
+#faq .faq-item p,
+.faq-section .faq-item p {
+  margin-top: 14px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  #faq .faq-item p,
+  #faq .faq-answer,
+  #faq .faq-answer p,
+  .faq-section .faq-item p,
+  .faq-section .faq-answer p {
+    font-size: 15px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* Contact CTA – improve description readability */
+.contact-cta .wrap > p {
+  color: #ffffff !important;
+  font-size: 20px !important;
+  line-height: 1.85 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+  max-width: 780px;
+}
+
+/* Enquiry response note */
+.contact-cta .wrap > small {
+  display: block;
+  color: #ffffff !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+  margin-top: 22px !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .contact-cta .wrap > p {
+    font-size: 17px !important;
+  }
+
+  .contact-cta .wrap > small {
+    font-size: 13px !important;
+  }
+}
+
+/* Metrics band – improve text readability */
+.metrics-band .metric > span {
+  color: #ffffff !important;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+.metrics-band .metric > small {
+  color: #a8cde3 !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px;
+  opacity: 1 !important;
+}
+
+/* Main heading */
+.metrics-band .metrics-grid > div:first-child h2 {
+  color: #ffffff !important;
+  font-size: 27px !important;
+  line-height: 1.5 !important;
+}
+
+/* Research disclaimer */
+.metrics-band .metric-disclaimer {
+  color: #ffffff !important;
+  font-size: 13px !important;
+  line-height: 1.7 !important;
+  opacity: 0.85 !important;
+}
+
+/* Mobile */
+@media (max-width: 760px) {
+  .metrics-band .metric > span {
+    font-size: 15px !important;
+  }
+
+  .metrics-band .metrics-grid > div:first-child h2 {
+    font-size: 23px !important;
+  }
+}
+
+/* TRUST STRIP – BLACK, BOLDER TEXT */
+.trust-strip > span {
+  color: #000000 !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.8px !important;
+  opacity: 1 !important;
+}
+
+.trust-strip > div b {
+  color: #000000 !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px !important;
+  opacity: 1 !important;
+}
+
+/* NAVIGATION – SLIGHTLY LARGER AND BOLDER */
+header nav a {
+  color: #000000 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.1px !important;
+}
+
+header nav a:hover {
+  color: #e00051 !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .trust-strip > span {
+    font-size: 12px !important;
+  }
+
+  .trust-strip > div b {
+    font-size: 12px !important;
+  }
+}
+
+/* FOOTER – brighter white and improved readability */
+
+/* Footer paragraph */
+.footer-top > div:first-child > p {
+  color: #ffffff !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+  line-height: 1.8 !important;
+  opacity: 1 !important;
+}
+
+/* Column headings */
+.footer-top > div > b {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.8px !important;
+}
+
+/* All footer links */
+.footer-top > div > a:not(.wordmark) {
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  line-height: 1.7 !important;
+  opacity: 1 !important;
+}
+
+.footer-top > div > a:not(.wordmark):hover {
+  color: #ff4b83 !important;
+}
+
+/* Footer motto */
+.footer-motto {
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  letter-spacing: 1.5px !important;
+}
+
+/* Copyright and bottom tagline */
+.footer-bottom span {
+  color: #ffffff !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+}
+
+/* Social icons */
+.footer-socials a {
+  color: #ffffff !important;
+  font-size: 19px !important;
+}
+
+/* Keep CTA button styling */
+.footer-top > div > button {
+  font-size: 14px !important;
+  font-weight: 800 !important;
+}
+
+
+/* Launchpad hero – two-tone decorative circles */
+.application-hero::before {
+  border-color: rgba(224, 0, 81, 0.35) !important;
+  background: rgba(224, 0, 81, 0.08) !important;
+}
+
+.application-hero::after {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+
+/* Smaller expertise checkbox cards */
+.choice-grid .choice-card {
+  min-height: 58px !important;
+  height: auto !important;
+  padding: 11px 15px !important;
+  display: flex;
+  align-items: center !important;
+}
+
+/* Align checkbox and label */
+.choice-grid .choice-card > label {
+  align-items: center !important;
+  font-size: 14px !important;
+  line-height: 1.3 !important;
+  gap: 9px !important;
+  margin: 0 !important;
+}
+
+/* Reduce first-choice spacing */
+.choice-grid .choice-card .first-choice {
+  margin-top: 4px !important;
+  padding-top: 4px !important;
+}
+
+/* Grid spacing */
+.choice-grid {
+  gap: 8px !important;
+  align-items: stretch;
+}
+
+@media (max-width: 640px) {
+  .choice-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .choice-grid .choice-card {
+    min-height: 52px !important;
+    padding: 10px 13px !important;
+  }
+}
+
+/* Compact Collective Leadership cards */
+.six-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  border: none;
+}
+
+.six-grid article {
+  border: none;
+  border-radius: 18px;
+  background: #fff;
+  padding: 22px 24px;
+  min-height: 165px;
+  box-shadow: 0 8px 25px rgba(0, 20, 71, 0.05);
+}
+
+.six-grid article h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.six-grid article p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .six-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .six-grid article {
+    min-height: auto;
+    padding: 20px;
+  }
+}
+
+
+.footer-socials a svg {
+  width: 21px;
+  height: 21px;
+  display: block;
+  color: #ffffff;
+}
+
+.footer-socials a:hover svg {
+  color: #ffffff;
+}
