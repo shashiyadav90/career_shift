@@ -2301,9 +2301,10 @@ p {
 
 @media (max-width: 760px) {
   .application-page .application-field input[type="date"] {
-    margin-left: -8px !important;
-    width: calc(100% + 8px) !important;
-    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: calc(100% - 8px) !important;
+    max-width: calc(100% - 8px) !important;
   }
 }
 
