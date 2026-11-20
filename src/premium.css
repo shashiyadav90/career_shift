@@ -2101,6 +2101,33 @@ p {
 }
 
 @media (max-width: 760px) {
+  .footer {
+    overflow-x: hidden;
+  }
+
+  .footer-top {
+    width: min(100% - 32px, 1160px) !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 22px !important;
+  }
+
+  .footer-top > div {
+    min-width: 0;
+  }
+
+  .footer-top > div > a:not(.wordmark) {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .footer-top > div > button {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
   .hero-content > p,
   #method .section-title > p,
   #practices .section-title > p,
@@ -2146,5 +2173,58 @@ p {
   .contact-modal > p {
     font-size: 16px !important;
     line-height: 1.75 !important;
+  }
+
+  /* Keep member portraits in a stable mobile frame. */
+  .people-grid .person-photo,
+  .collaborator-grid .person-photo,
+  .board-grid .person-photo {
+    width: 100%;
+    height: 260px !important;
+    aspect-ratio: auto !important;
+    overflow: hidden;
+  }
+
+  .people-grid .person-photo img,
+  .collaborator-grid .person-photo img,
+  .board-grid .person-photo img {
+    width: 100%;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center top;
+  }
+}
+
+@media (max-width: 460px) {
+  .people-grid .person-photo,
+  .collaborator-grid .person-photo,
+  .board-grid .person-photo {
+    height: 280px !important;
+  }
+}
+
+/* Strategy cards: remove the reserved space for decorative numbers. */
+#strategy-culture .strategy-list > div {
+  display: grid !important;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr) !important;
+  gap: 16px !important;
+  align-items: center !important;
+  padding-left: 18px !important;
+  padding-right: 18px !important;
+}
+
+#strategy-culture .strategy-list > div > span {
+  display: none !important;
+}
+
+@media (max-width: 760px) {
+  #strategy-culture .strategy-list > div {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+    padding: 18px 16px !important;
+  }
+
+  #strategy-culture .strategy-list > div > p {
+    grid-column: auto !important;
   }
 }
