@@ -1888,3 +1888,263 @@ p {
   object-fit: contain;
   display: block;
 }
+
+/* =========================================================
+   FINAL TYPOGRAPHY OVERRIDES
+   premium.css is loaded after styles.css, so these are the
+   authoritative site-wide readability rules.
+   ========================================================= */
+
+.hero-content > p,
+#method .section-title > p,
+#practices .section-title > p,
+.coaching-journey .section-title > p,
+#leadership-systems .split-heading > div:last-child > p,
+#development .section-title > p,
+#strategy-culture .split-heading > div:last-child > p,
+#team .section-title > p,
+#advisory .section-title > p,
+.tedx-section > div > p,
+#perspectives .section-title > p,
+.practice-body > p,
+.movement-grid article > p,
+.podcast-details > p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
+
+.hero-content > p {
+  color: #fff !important;
+}
+
+#method .section-title > p,
+#practices .section-title > p,
+.coaching-journey .section-title > p,
+#leadership-systems .split-heading > div:last-child > p,
+#development .section-title > p,
+#strategy-culture .split-heading > div:last-child > p,
+#team .section-title > p,
+#advisory .section-title > p,
+.tedx-section > div > p,
+#perspectives .section-title > p,
+.practice-body > p,
+.movement-grid article > p,
+.podcast-details > p {
+  color: #263449 !important;
+}
+
+#method .method-detail > p {
+  color: #fff !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+#strategy-culture .strategy-list > div > p,
+#leadership-systems .six-grid article > p,
+#leadership-systems .signature-method p,
+#development .development-grid article > p,
+#founder.founder-layout > div > p,
+#team .person-card > p,
+#team .person-card > small,
+#advisory .person-card > p,
+#advisory .person-card > small,
+#perspectives .article-grid article > p,
+.faq-section .faq-item > p {
+  color: #263449 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+.contact-cta .wrap > small {
+  color: #fff !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+.hero-caption {
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 1.5px !important;
+}
+
+#perspectives .article-grid article > small {
+  display: block;
+  margin-top: 14px !important;
+  margin-bottom: 8px !important;
+  color: #df245c !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 1.5px !important;
+}
+
+#perspectives .article-grid article > h3 {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+#perspectives .article-grid article > p {
+  margin-top: 0 !important;
+  padding-bottom: 10px !important;
+}
+
+#founder.founder-layout h3 {
+  margin-bottom: 12px !important;
+}
+
+#founder.founder-layout small {
+  display: block;
+  margin-bottom: 20px !important;
+}
+
+#founder.founder-layout > div > p:first-of-type {
+  margin-top: 0 !important;
+}
+
+.book-hero p,
+.book-movements .section-title > p,
+.chapter-request > div > p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
+
+.chapter-form label,
+.chapter-form label input,
+.chapter-form .consent,
+.chapter-form button,
+.chapter-form input::placeholder {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.application-page .application-hero-inner > p,
+.application-page .application-good-to-know p,
+.application-page .application-section-heading > p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
+
+.application-page .application-field > span,
+.application-page .choice-card label,
+.application-page .radio-options label,
+.application-page .application-consent,
+.application-page .application-before-submit,
+.application-page .application-before-submit p,
+.application-page .application-submit-row > p,
+.application-page .application-submit-row .button,
+.application-page .application-required-note,
+.application-page .application-field > small,
+.application-page .choice-limit,
+.application-page .word-count,
+.application-page .file-selected,
+.application-page .field-error {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.application-page .application-field > small,
+.application-page .choice-limit,
+.application-page .word-count,
+.application-page .application-required-note,
+.application-page .application-submit-row > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+}
+
+/* Contact modal and enquiry form readability */
+.contact-modal > p {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form select,
+.contact-form .consent,
+.contact-form button,
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.contact-form .form-note {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.contact-form .form-note {
+  color: #263449 !important;
+}
+
+.contact-modal .contact-form label,
+.contact-modal .contact-form .consent {
+  color: #ffffff !important;
+}
+
+.contact-modal .contact-form .form-note {
+  color: #ffffff !important;
+}
+
+/* Intro copy: keep both paragraphs at the same readable size. */
+.intro-copy > p,
+.intro-copy > p.large-copy {
+  font-size: 20px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  color: #263449 !important;
+}
+
+@media (max-width: 760px) {
+  .hero-content > p,
+  #method .section-title > p,
+  #practices .section-title > p,
+  .coaching-journey .section-title > p,
+  #leadership-systems .split-heading > div:last-child > p,
+  #development .section-title > p,
+  #strategy-culture .split-heading > div:last-child > p,
+  #team .section-title > p,
+  #advisory .section-title > p,
+  .tedx-section > div > p,
+  #perspectives .section-title > p,
+  .practice-body > p,
+  .movement-grid article > p,
+  .podcast-details > p,
+  #method .method-detail > p,
+  #strategy-culture .strategy-list > div > p,
+  #leadership-systems .six-grid article > p,
+  #leadership-systems .signature-method p,
+  #development .development-grid article > p,
+  #founder.founder-layout > div > p,
+  #team .person-card > p,
+  #team .person-card > small,
+  #advisory .person-card > p,
+  #advisory .person-card > small,
+  #perspectives .article-grid article > p,
+  .faq-section .faq-item > p,
+  .contact-cta .wrap > small,
+  .book-hero p,
+  .book-movements .section-title > p,
+  .chapter-request > div > p,
+  .application-page .application-hero-inner > p,
+  .application-page .application-good-to-know p,
+  .application-page .application-section-heading > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+
+  .hero-caption {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  .contact-modal > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}

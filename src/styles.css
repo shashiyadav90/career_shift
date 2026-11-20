@@ -338,7 +338,7 @@ button {
 }
 
 .large-copy {
-  font: 500 22px/1.5 Manrope;
+  font: 400 20px/1.8 Manrope;
   color: var(--navy)
 }
 
@@ -504,9 +504,9 @@ button {
 }
 
 .method-detail p {
-  font-size: 12px;
-  line-height: 1.8;
-  color: #526c7b;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  color: #ffffff !important;
   max-width: 410px
 }
 
@@ -1892,7 +1892,7 @@ body {
 }
 
 .large-copy {
-  font-size: 25px
+  font-size: 20px !important;
 }
 
 .intro-copy p:not(.large-copy),
@@ -2052,7 +2052,7 @@ body {
   }
 
   .large-copy {
-    font-size: 21px
+    font-size: 20px !important;
   }
 
   .intro-copy p:not(.large-copy) {
@@ -4224,14 +4224,6 @@ input[type="radio"] {
   }
 }
 
-/* Match the lower paragraph to the main paragraph */
-.intro-copy p:not(.large-copy) {
-  font-family: Manrope, sans-serif;
-  font-size: 22px !important;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #001447 !important;
-}
 
 /* Career Shifts Method – white step headings */
 .method-detail h2,
@@ -5016,3 +5008,360 @@ header nav a:hover {
 .article-grid article:nth-child(2) img {
   object-position: center 2% !important;
 }
+
+/* Match Method section description to Hero paragraph */
+#method .section-title > p {
+  font-size: 17px !important;
+  line-height: 1.85;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  #method .section-title > p {
+    font-size: 15px !important;
+  }
+}
+
+/* Practices section description */
+#practices .section-title > p {
+  font-size: 17px !important;
+  line-height: 1.85;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+@media (max-width: 760px) {
+  #practices .section-title > p {
+    font-size: 15px !important;
+  }
+}
+
+/* Consistent 18px descriptions for the main practice and coaching sections. */
+#method .section-title > p,
+#practices .section-title > p,
+#practices .practice-body > p,
+#coaching .feature-copy > p,
+#coaching .feature-copy li,
+.coaching-journey .section-title > p,
+.coaching-journey .journey-cards h4,
+.coaching-journey .journey-cards article > p,
+.coaching-journey .hogan-note > p {
+  color: #263449 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+/* The method detail sits on a dark panel, so it keeps a light readable color. */
+#method .method-detail > p {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+@media (max-width: 760px) {
+  #method .section-title > p,
+  #practices .section-title > p,
+  #practices .practice-body > p,
+  #coaching .feature-copy > p,
+  #coaching .feature-copy li,
+  .coaching-journey .section-title > p,
+  .coaching-journey .journey-cards h4,
+  .coaching-journey .journey-cards article > p,
+  .coaching-journey .hogan-note > p,
+  #method .method-detail > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* Remaining practice, signature-method, and development descriptions. */
+#leadership-systems .split-heading > div:last-child > p,
+#leadership-systems .six-grid article > p,
+#leadership-systems .signature-method p,
+#development .section-title > p,
+#development .development-grid article > p {
+  color: #263449 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 760px) {
+  #leadership-systems .split-heading > div:last-child > p,
+  #leadership-systems .six-grid article > p,
+  #leadership-systems .signature-method p,
+  #development .section-title > p,
+  #development .development-grid article > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* Strategy, founder, team, advisory, and perspective descriptions. */
+#strategy-culture .split-heading > div:last-child > p,
+#strategy-culture .strategy-list > div > p,
+#founder.founder-layout > div > p,
+#team .section-title > p,
+#team .person-card > p,
+#team .person-card > small,
+#advisory .section-title > p,
+#advisory .person-card > p,
+#advisory .person-card > small,
+#perspectives .section-title > p,
+#perspectives .article-grid article > p {
+  color: #263449 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 760px) {
+  #strategy-culture .split-heading > div:last-child > p,
+  #strategy-culture .strategy-list > div > p,
+  #founder.founder-layout > div > p,
+  #team .section-title > p,
+  #team .person-card > p,
+  #team .person-card > small,
+  #advisory .section-title > p,
+  #advisory .person-card > p,
+  #advisory .person-card > small,
+  #perspectives .section-title > p,
+  #perspectives .article-grid article > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* FAQ answers and enquiry note use the same description typography. */
+.faq-section .faq-item > p,
+.contact-cta .wrap > small {
+  color: #263449 !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  opacity: 1 !important;
+}
+
+.contact-cta .wrap > small {
+  color: #ffffff !important;
+}
+
+@media (max-width: 760px) {
+  .faq-section .faq-item > p,
+  .contact-cta .wrap > small {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* Match all requested section descriptions to the primary hero paragraph. */
+.hero-content > p,
+#method .section-title > p,
+#practices .section-title > p,
+.coaching-journey .section-title > p,
+#leadership-systems .split-heading > div:last-child > p,
+#development .section-title > p,
+#strategy-culture .split-heading > div:last-child > p,
+#team .section-title > p,
+#advisory .section-title > p,
+.tedx-section > div > p,
+#perspectives .section-title > p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
+
+.hero-content > p {
+  color: #ffffff !important;
+}
+
+#method .section-title > p,
+#practices .section-title > p,
+.coaching-journey .section-title > p,
+#leadership-systems .split-heading > div:last-child > p,
+#development .section-title > p,
+#strategy-culture .split-heading > div:last-child > p,
+#team .section-title > p,
+#advisory .section-title > p,
+.tedx-section > div > p,
+#perspectives .section-title > p {
+  color: #263449 !important;
+}
+
+@media (max-width: 760px) {
+  .hero-content > p,
+  #method .section-title > p,
+  #practices .section-title > p,
+  .coaching-journey .section-title > p,
+  #leadership-systems .split-heading > div:last-child > p,
+  #development .section-title > p,
+  #strategy-culture .split-heading > div:last-child > p,
+  #team .section-title > p,
+  #advisory .section-title > p,
+  .tedx-section > div > p,
+  #perspectives .section-title > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* Hero caption readability */
+.hero-caption {
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 1.5px !important;
+}
+
+@media (max-width: 760px) {
+  .hero-caption {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+}
+
+/* Add breathing room between the founder name, role, and biography. */
+#founder.founder-layout h3 {
+  margin-bottom: 12px !important;
+}
+
+#founder.founder-layout small {
+  display: block;
+  margin-bottom: 20px !important;
+}
+
+#founder.founder-layout > div > p:first-of-type {
+  margin-top: 0 !important;
+}
+
+/* Perspective article category labels */
+#perspectives .article-grid article > small {
+  display: block;
+  color: #df245c !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 1.5px !important;
+  margin-top: 14px !important;
+  margin-bottom: 8px !important;
+}
+
+#perspectives .article-grid article > h3 {
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+#perspectives .article-grid article > p {
+  margin-top: 0 !important;
+  padding-bottom: 10px !important;
+}
+
+/* Intro copy: keep both paragraphs at the same readable size. */
+.intro-copy > p,
+.intro-copy > p.large-copy {
+  font-size: 20px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+  color: #263449 !important;
+}
+
+/* Application form readability */
+.application-page .application-hero-inner > p,
+.application-page .application-good-to-know p,
+.application-page .application-section-heading > p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
+
+.application-page .application-field > span,
+.application-page .application-field label,
+.application-page .choice-card label,
+.application-page .radio-options label,
+.application-page .application-consent,
+.application-page .application-before-submit,
+.application-page .application-before-submit p,
+.application-page .application-submit-row > p,
+.application-page .application-submit-row .button,
+.application-page .application-required-note,
+.application-page .application-field > small,
+.application-page .choice-limit,
+.application-page .word-count,
+.application-page .file-selected,
+.application-page .field-error {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.application-page .application-field > small,
+.application-page .choice-limit,
+.application-page .word-count,
+.application-page .application-required-note,
+.application-page .application-submit-row > p {
+  color: #263449 !important;
+  opacity: 1 !important;
+}
+
+.application-page .application-before-submit p,
+.application-page .application-consent {
+  color: #14243a !important;
+}
+
+@media (max-width: 760px) {
+  .application-page .application-hero-inner > p,
+  .application-page .application-good-to-know p,
+  .application-page .application-section-heading > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+
+/* Book page description and Chapter 1 form readability. */
+.book-hero p,
+.book-movements .section-title > p,
+.movement-grid article > p,
+.chapter-request > div > p {
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+  font-weight: 400 !important;
+}
+
+.chapter-form label,
+.chapter-form label input,
+.chapter-form .consent,
+.chapter-form button,
+.chapter-form input::placeholder {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+.chapter-form label,
+.chapter-form .consent {
+  color: #263449 !important;
+}
+
+/* Keep all referenced descriptions on the same dark body text color. */
+.practice-body > p,
+.movement-grid article > p,
+#method .section-title > p,
+.coaching-journey .section-title > p,
+.podcast-details > p {
+  color: #263449 !important;
+}
+
+@media (max-width: 760px) {
+  .book-hero p,
+  .book-movements .section-title > p,
+  .movement-grid article > p,
+  .chapter-request > div > p {
+    font-size: 16px !important;
+    line-height: 1.75 !important;
+  }
+}
+

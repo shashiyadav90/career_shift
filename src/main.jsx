@@ -1517,12 +1517,11 @@ export default function App() {
               <em>Shape what comes next.</em>
             </h2>
           </div>
-          <div className="intro-copy">
+          <div className="large-copy">
             <p className="large-copy">
               Most organisations don't have a strategy problem. They have a
               leadership system that cannot execute the strategy they have.
-            </p>
-            <p>
+              <p></p>
               Career Shifts works in the space between what leaders intend and
               what the organisation experiences. We bring rigorous diagnosis,
               deep human understanding and systems thinking to the moments when
@@ -1950,7 +1949,7 @@ export default function App() {
                 <article className="person-card" key={person.name}>
                   <div className="person-photo">
                     <img
-                      src={getImage(person.img)}
+                      src={getImage(person.img) || undefined}
                       alt={person.name}
                       loading="lazy"
                       onError={(e) => {
@@ -1986,7 +1985,7 @@ export default function App() {
                 <article className="person-card" key={person.name}>
                   <div className="person-photo">
                     <img
-                      src={getImage(person.img)}
+                      src={getImage(person.img) || undefined}
                       alt={person.name}
                       loading="lazy"
                       onError={(e) => {
@@ -2022,7 +2021,7 @@ export default function App() {
               <article className="person-card" key={person.name}>
                 <div className="person-photo">
                   <img
-                    src={getImage(person.img)}
+                    src={getImage(person.img) || undefined}
                     alt={person.name}
                     loading="lazy"
                     onError={(e) => {
@@ -2516,7 +2515,7 @@ function TeamPage() {
     <article className="person-card" key={person.name}>
       <div className="person-photo">
         <img
-          src={getImage(person.img)}
+          src={getImage(person.img) || undefined}
           alt={person.name}
           loading="lazy"
           onError={(e) => {
