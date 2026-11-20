@@ -2252,3 +2252,40 @@ p {
 .problem-row > span {
   display: none !important;
 }
+
+/* Keep the country code and phone number on one horizontal line. */
+.application-page .country-phone,
+.contact-form .country-phone {
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.application-page .country-phone select,
+.contact-form .country-phone select {
+  flex: 0 0 84px !important;
+  width: 84px !important;
+  min-width: 84px !important;
+}
+
+.application-page .country-phone input[type="tel"],
+.contact-form .country-phone input[type="tel"] {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+}
+
+/* Remove the decorative outer circles around social icons. */
+.footer-socials a {
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Remove the line above the methodology cards. */
+.method-list {
+  border-top: 0 !important;
+}

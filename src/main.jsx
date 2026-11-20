@@ -259,7 +259,7 @@ function ContactForm({ compact = false }) {
       </label>
 
       <button className="button button-red" type="submit">
-        Send enquiry <span>↗</span>
+        Send enquiry <span>🚀</span>
       </button>
 
       <p className="form-note">
@@ -616,7 +616,7 @@ function DiscoveryButton({ onClick, children = "Book a discovery call" }) {
       type="button"
       onClick={onClick}
     >
-      {children} <span>↗</span>
+      {children} <span>🚀</span>
     </button>
   );
 }
@@ -1174,7 +1174,7 @@ function ApplicationPage({ type }) {
                 type="submit"
               >
                 {isCollaborate ? "Submit Interest" : "Submit Application"}{" "}
-                <span>↗</span>
+                <span>🚀</span>
               </button>
 
               <p>
@@ -1241,7 +1241,7 @@ function Header({ onContact }) {
             onContact();
           }}
         >
-          Start a conversation ↗
+          Start a conversation 🚀
         </button>
       </nav>
     </header>
@@ -1339,7 +1339,7 @@ function Footer({ onContact }) {
           >
             YouTube ↗
           </a>
-          <button onClick={onContact}>Start a Conversation ↗</button>
+          <button onClick={onContact}>Start a Conversation 🚀</button>
         </div>
       </div>
       <div className="footer-bottom">
@@ -1382,7 +1382,7 @@ function Methodology({ onBook }) {
           >
             <b>{item[0]}</b>
             <small>{item[1]}</small>
-            <i>↗</i>
+            <i>🚀</i>
           </button>
         ))}
       </div>
@@ -1484,7 +1484,7 @@ export default function App() {
                 className="button button-red"
                 onClick={() => setModal(true)}
               >
-                Start a conversation ↗
+                Start a conversation 🚀
               </button>
               <a className="button button-outline" href="#method">
                 How we work ↓
@@ -1528,7 +1528,7 @@ export default function App() {
               the next move matters most.
             </p>
             <a className="button button-red" href="#method">
-              Explore our approach ↗
+              Explore our approach 🚀
             </a>
           </div>
         </section>
@@ -1621,7 +1621,7 @@ export default function App() {
                 className="button button-outline"
                 onClick={() => setModal(true)}
               >
-                Talk through your challenge ↗
+              Talk through your challenge 🚀
               </button>
             </div>
             <div className="problem-list">
@@ -1669,7 +1669,7 @@ export default function App() {
               onClick={() => setModal(true)}
               type="button"
             >
-              Book a discovery call ↗
+              Book a discovery call 🚀
             </button>
           </div>
         </section>
@@ -1929,7 +1929,7 @@ export default function App() {
               target="_blank"
               rel="noreferrer"
             >
-              Connect on LinkedIn ↗
+                Connect on LinkedIn 🚀
             </a>
           </div>
         </section>
@@ -2063,7 +2063,7 @@ export default function App() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Watch episodes ↗
+                Watch episodes 🚀
               </a>
             </div>
             <img
@@ -2091,7 +2091,7 @@ export default function App() {
               target="_blank"
               rel="noreferrer"
             >
-              Watch the TEDx talk ↗
+              Watch the TEDx talk 🚀
             </a>
           </div>
           <a
@@ -2187,7 +2187,7 @@ export default function App() {
               className="button button-red"
               onClick={() => setModal(true)}
             >
-              Start a conversation ↗
+              Start a conversation 🚀
             </button>
             <small>
               Every enquiry is reviewed personally. We aim to respond within 2
@@ -2304,7 +2304,7 @@ function BookPage() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Buy the book on Amazon ↗
+                  Buy the book on Amazon 🚀
                 </a>
                 <a className="button button-outline" href="#chapter-one">
                   Request Chapter 1
@@ -2404,7 +2404,7 @@ function BookPage() {
               also like occasional updates from Career Shifts.
             </label>
             <button className="button button-red" type="submit">
-              Email me Chapter 1 ↗
+              Email me Chapter 1 🚀
             </button>
           </form>
         </section>
@@ -2447,7 +2447,7 @@ function PodcastPage() {
                 target="_blank"
                 rel="noreferrer"
               >
-                Watch on YouTube ↗
+                Watch on YouTube 🚀
               </a>
             </div>
             <div className="podcast-art">
@@ -2483,7 +2483,7 @@ function PodcastPage() {
             target="_blank"
             rel="noreferrer"
           >
-            Explore all episodes ↗
+          Explore all episodes 🚀
           </a>
         </section>
         <section className="book-podcast-promo">
@@ -2496,7 +2496,7 @@ function PodcastPage() {
               <p>Continue the conversation with Gopal A. Iyer’s book.</p>
             </div>
             <a className="button button-red" href="/book">
-              Discover the book ↗
+              Discover the book 🚀
             </a>
           </div>
         </section>
@@ -2607,7 +2607,7 @@ function TeamPage() {
               you’re <em>working through.</em>
             </h2>
             <a className="button button-red" href="/#contact">
-              Start a conversation ↗
+              Start a conversation 🚀
             </a>
           </div>
         </section>
