@@ -2116,7 +2116,17 @@ p {
   }
 
   .footer-top > div > a:not(.wordmark) {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
     min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .footer-top > div:first-child > p {
+    width: 100%;
+    max-width: 100% !important;
     overflow-wrap: anywhere;
     word-break: break-word;
   }
@@ -2227,4 +2237,18 @@ p {
   #strategy-culture .strategy-list > div > p {
     grid-column: auto !important;
   }
+
+  /* Keep the CONNECT column inside the viewport on narrow screens. */
+  .footer-top {
+    column-gap: 10px !important;
+  }
+}
+
+/* Problem rows: do not reserve space for the hidden decorative numbers. */
+.problem-row {
+  grid-template-columns: minmax(0, 1fr) 18px !important;
+}
+
+.problem-row > span {
+  display: none !important;
 }
