@@ -94,7 +94,7 @@ const people = [
   {
     name: "Sreelekha Namboodiri",
     role: "Director of Operations, Career Shifts Consulting",
-    img: "sreelekha.avif",
+    img: "sreeleka.jpg",
     bio: "Runs operations from the first enquiry through scheduling and delivery, helping every engagement move with care, clarity and consistency.",
   },
 ];
@@ -692,7 +692,7 @@ function ApplicationPage({ type }) {
         <div className="application-container">
           {typeof window !== "undefined" &&
             new URLSearchParams(window.location.search).get("submitted") ===
-              "true" && (
+            "true" && (
               <div className="application-success" role="status">
                 Thank you. Your application has been submitted to Career Shifts.
               </div>
@@ -1213,10 +1213,11 @@ function Header({ onContact }) {
   return (
     <header className="site-header">
       <a className="wordmark" href="/">
-        <span><span className="pink">
-          CAREER</span>SHIFTS
-        </span>
-        <small>DREAM DARE DO</small>
+        <img
+          src={getImage("careershift.webp")}
+          alt="Career Shifts Consulting - Dream Dare Do"
+          className="header-logo"
+        />
       </a>
 
       <button
@@ -1254,10 +1255,11 @@ function Footer({ onContact }) {
       <div className="footer-top">
         <div>
           <a className="wordmark footer-mark" href="/">
-            <span><span className="pink">
-              CAREER</span>SHIFTS
-            </span>
-            <small>DREAM DARE DO</small>
+            <img
+              src={getImage("careershift.png")}
+              alt="Career Shifts Consulting - Dream Dare Do"
+              className="footer-logo"
+            />
           </a>
           <p>
             Leadership and organisational advisory, built on rigorous diagnosis
@@ -1415,7 +1417,7 @@ export default function App() {
 
   const [submitted, setSubmitted] = useState(
     typeof window !== "undefined" &&
-      new URLSearchParams(window.location.search).get("submitted") === "true",
+    new URLSearchParams(window.location.search).get("submitted") === "true",
   );
 
   const faqs = [
@@ -1621,7 +1623,7 @@ export default function App() {
                 className="button button-outline"
                 onClick={() => setModal(true)}
               >
-              Talk through your challenge 🚀
+                Talk through your challenge 🚀
               </button>
             </div>
             <div className="problem-list">
@@ -1929,7 +1931,7 @@ export default function App() {
               target="_blank"
               rel="noreferrer"
             >
-                Connect on LinkedIn 🚀
+              Connect on LinkedIn 🚀
             </a>
           </div>
         </section>
@@ -2483,7 +2485,7 @@ function PodcastPage() {
             target="_blank"
             rel="noreferrer"
           >
-          Explore all episodes 🚀
+            Explore all episodes 🚀
           </a>
         </section>
         <section className="book-podcast-promo">

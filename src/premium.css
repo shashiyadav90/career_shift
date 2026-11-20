@@ -1895,62 +1895,62 @@ p {
    authoritative site-wide readability rules.
    ========================================================= */
 
-.hero-content > p,
-#method .section-title > p,
-#practices .section-title > p,
-.coaching-journey .section-title > p,
-#leadership-systems .split-heading > div:last-child > p,
-#development .section-title > p,
-#strategy-culture .split-heading > div:last-child > p,
-#team .section-title > p,
-#advisory .section-title > p,
-.tedx-section > div > p,
-#perspectives .section-title > p,
-.practice-body > p,
-.movement-grid article > p,
-.podcast-details > p {
+.hero-content>p,
+#method .section-title>p,
+#practices .section-title>p,
+.coaching-journey .section-title>p,
+#leadership-systems .split-heading>div:last-child>p,
+#development .section-title>p,
+#strategy-culture .split-heading>div:last-child>p,
+#team .section-title>p,
+#advisory .section-title>p,
+.tedx-section>div>p,
+#perspectives .section-title>p,
+.practice-body>p,
+.movement-grid article>p,
+.podcast-details>p {
   font-size: 18px !important;
   line-height: 1.8 !important;
   font-weight: 400 !important;
 }
 
-.hero-content > p {
+.hero-content>p {
   color: #fff !important;
 }
 
-#method .section-title > p,
-#practices .section-title > p,
-.coaching-journey .section-title > p,
-#leadership-systems .split-heading > div:last-child > p,
-#development .section-title > p,
-#strategy-culture .split-heading > div:last-child > p,
-#team .section-title > p,
-#advisory .section-title > p,
-.tedx-section > div > p,
-#perspectives .section-title > p,
-.practice-body > p,
-.movement-grid article > p,
-.podcast-details > p {
+#method .section-title>p,
+#practices .section-title>p,
+.coaching-journey .section-title>p,
+#leadership-systems .split-heading>div:last-child>p,
+#development .section-title>p,
+#strategy-culture .split-heading>div:last-child>p,
+#team .section-title>p,
+#advisory .section-title>p,
+.tedx-section>div>p,
+#perspectives .section-title>p,
+.practice-body>p,
+.movement-grid article>p,
+.podcast-details>p {
   color: #263449 !important;
 }
 
-#method .method-detail > p {
+#method .method-detail>p {
   color: #fff !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
 }
 
-#strategy-culture .strategy-list > div > p,
-#leadership-systems .six-grid article > p,
+#strategy-culture .strategy-list>div>p,
+#leadership-systems .six-grid article>p,
 #leadership-systems .signature-method p,
-#development .development-grid article > p,
-#founder.founder-layout > div > p,
-#team .person-card > p,
-#team .person-card > small,
-#advisory .person-card > p,
-#advisory .person-card > small,
-#perspectives .article-grid article > p,
-.faq-section .faq-item > p {
+#development .development-grid article>p,
+#founder.founder-layout>div>p,
+#team .person-card>p,
+#team .person-card>small,
+#advisory .person-card>p,
+#advisory .person-card>small,
+#perspectives .article-grid article>p,
+.faq-section .faq-item>p {
   color: #263449 !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
@@ -1958,7 +1958,7 @@ p {
   opacity: 1 !important;
 }
 
-.contact-cta .wrap > small {
+.contact-cta .wrap>small {
   color: #fff !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
@@ -1972,7 +1972,7 @@ p {
   letter-spacing: 1.5px !important;
 }
 
-#perspectives .article-grid article > small {
+#perspectives .article-grid article>small {
   display: block;
   margin-top: 14px !important;
   margin-bottom: 8px !important;
@@ -1983,12 +1983,12 @@ p {
   letter-spacing: 1.5px !important;
 }
 
-#perspectives .article-grid article > h3 {
+#perspectives .article-grid article>h3 {
   margin-top: 0 !important;
   margin-bottom: 8px !important;
 }
 
-#perspectives .article-grid article > p {
+#perspectives .article-grid article>p {
   margin-top: 0 !important;
   padding-bottom: 10px !important;
 }
@@ -2002,13 +2002,13 @@ p {
   margin-bottom: 20px !important;
 }
 
-#founder.founder-layout > div > p:first-of-type {
+#founder.founder-layout>div>p:first-of-type {
   margin-top: 0 !important;
 }
 
 .book-hero p,
-.book-movements .section-title > p,
-.chapter-request > div > p {
+.book-movements .section-title>p,
+.chapter-request>div>p {
   font-size: 18px !important;
   line-height: 1.8 !important;
   font-weight: 400 !important;
@@ -2023,24 +2023,24 @@ p {
   line-height: 1.7 !important;
 }
 
-.application-page .application-hero-inner > p,
+.application-page .application-hero-inner>p,
 .application-page .application-good-to-know p,
-.application-page .application-section-heading > p {
+.application-page .application-section-heading>p {
   font-size: 18px !important;
   line-height: 1.8 !important;
   font-weight: 400 !important;
 }
 
-.application-page .application-field > span,
+.application-page .application-field>span,
 .application-page .choice-card label,
 .application-page .radio-options label,
 .application-page .application-consent,
 .application-page .application-before-submit,
 .application-page .application-before-submit p,
-.application-page .application-submit-row > p,
+.application-page .application-submit-row>p,
 .application-page .application-submit-row .button,
 .application-page .application-required-note,
-.application-page .application-field > small,
+.application-page .application-field>small,
 .application-page .choice-limit,
 .application-page .word-count,
 .application-page .file-selected,
@@ -2049,17 +2049,17 @@ p {
   line-height: 1.7 !important;
 }
 
-.application-page .application-field > small,
+.application-page .application-field>small,
 .application-page .choice-limit,
 .application-page .word-count,
 .application-page .application-required-note,
-.application-page .application-submit-row > p {
+.application-page .application-submit-row>p {
   color: #263449 !important;
   opacity: 1 !important;
 }
 
 /* Contact modal and enquiry form readability */
-.contact-modal > p {
+.contact-modal>p {
   color: #ffffff !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
@@ -2092,8 +2092,8 @@ p {
 }
 
 /* Intro copy: keep both paragraphs at the same readable size. */
-.intro-copy > p,
-.intro-copy > p.large-copy {
+.intro-copy>p,
+.intro-copy>p.large-copy {
   font-size: 20px !important;
   line-height: 1.8 !important;
   font-weight: 400 !important;
@@ -2111,11 +2111,11 @@ p {
     gap: 22px !important;
   }
 
-  .footer-top > div {
+  .footer-top>div {
     min-width: 0;
   }
 
-  .footer-top > div > a:not(.wordmark) {
+  .footer-top>div>a:not(.wordmark) {
     display: block;
     width: 100% !important;
     max-width: 100%;
@@ -2124,53 +2124,53 @@ p {
     word-break: break-word;
   }
 
-  .footer-top > div:first-child > p {
+  .footer-top>div:first-child>p {
     width: 100%;
     max-width: 100% !important;
     overflow-wrap: anywhere;
     word-break: break-word;
   }
 
-  .footer-top > div > button {
+  .footer-top>div>button {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box;
     white-space: normal;
   }
 
-  .hero-content > p,
-  #method .section-title > p,
-  #practices .section-title > p,
-  .coaching-journey .section-title > p,
-  #leadership-systems .split-heading > div:last-child > p,
-  #development .section-title > p,
-  #strategy-culture .split-heading > div:last-child > p,
-  #team .section-title > p,
-  #advisory .section-title > p,
-  .tedx-section > div > p,
-  #perspectives .section-title > p,
-  .practice-body > p,
-  .movement-grid article > p,
-  .podcast-details > p,
-  #method .method-detail > p,
-  #strategy-culture .strategy-list > div > p,
-  #leadership-systems .six-grid article > p,
+  .hero-content>p,
+  #method .section-title>p,
+  #practices .section-title>p,
+  .coaching-journey .section-title>p,
+  #leadership-systems .split-heading>div:last-child>p,
+  #development .section-title>p,
+  #strategy-culture .split-heading>div:last-child>p,
+  #team .section-title>p,
+  #advisory .section-title>p,
+  .tedx-section>div>p,
+  #perspectives .section-title>p,
+  .practice-body>p,
+  .movement-grid article>p,
+  .podcast-details>p,
+  #method .method-detail>p,
+  #strategy-culture .strategy-list>div>p,
+  #leadership-systems .six-grid article>p,
   #leadership-systems .signature-method p,
-  #development .development-grid article > p,
-  #founder.founder-layout > div > p,
-  #team .person-card > p,
-  #team .person-card > small,
-  #advisory .person-card > p,
-  #advisory .person-card > small,
-  #perspectives .article-grid article > p,
-  .faq-section .faq-item > p,
-  .contact-cta .wrap > small,
+  #development .development-grid article>p,
+  #founder.founder-layout>div>p,
+  #team .person-card>p,
+  #team .person-card>small,
+  #advisory .person-card>p,
+  #advisory .person-card>small,
+  #perspectives .article-grid article>p,
+  .faq-section .faq-item>p,
+  .contact-cta .wrap>small,
   .book-hero p,
-  .book-movements .section-title > p,
-  .chapter-request > div > p,
-  .application-page .application-hero-inner > p,
+  .book-movements .section-title>p,
+  .chapter-request>div>p,
+  .application-page .application-hero-inner>p,
   .application-page .application-good-to-know p,
-  .application-page .application-section-heading > p {
+  .application-page .application-section-heading>p {
     font-size: 16px !important;
     line-height: 1.75 !important;
   }
@@ -2180,7 +2180,7 @@ p {
     line-height: 1.6 !important;
   }
 
-  .contact-modal > p {
+  .contact-modal>p {
     font-size: 16px !important;
     line-height: 1.75 !important;
   }
@@ -2206,6 +2206,7 @@ p {
 }
 
 @media (max-width: 460px) {
+
   .people-grid .person-photo,
   .collaborator-grid .person-photo,
   .board-grid .person-photo {
@@ -2214,7 +2215,7 @@ p {
 }
 
 /* Strategy cards: remove the reserved space for decorative numbers. */
-#strategy-culture .strategy-list > div {
+#strategy-culture .strategy-list>div {
   display: grid !important;
   grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr) !important;
   gap: 16px !important;
@@ -2223,18 +2224,18 @@ p {
   padding-right: 18px !important;
 }
 
-#strategy-culture .strategy-list > div > span {
+#strategy-culture .strategy-list>div>span {
   display: none !important;
 }
 
 @media (max-width: 760px) {
-  #strategy-culture .strategy-list > div {
+  #strategy-culture .strategy-list>div {
     grid-template-columns: 1fr !important;
     gap: 8px !important;
     padding: 18px 16px !important;
   }
 
-  #strategy-culture .strategy-list > div > p {
+  #strategy-culture .strategy-list>div>p {
     grid-column: auto !important;
   }
 
@@ -2249,11 +2250,11 @@ p {
   grid-template-columns: minmax(0, 1fr) !important;
 }
 
-.problem-row > span {
+.problem-row>span {
   display: none !important;
 }
 
-.problem-row > b {
+.problem-row>b {
   display: none !important;
 }
 

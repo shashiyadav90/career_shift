@@ -101,6 +101,16 @@ button {
   color: #71808b
 }
 
+/* Keep the image wordmark contained inside the sticky header. */
+.header-logo {
+  display: block;
+  width: 180px;
+  height: 62px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -1452,6 +1462,11 @@ button {
 @media(max-width:760px) {
   .wrap {
     width: calc(100% - 36px)
+  }
+
+  .header-logo {
+    width: 145px;
+    height: 50px;
   }
 
   .site-header {
@@ -5010,7 +5025,7 @@ header nav a:hover {
 }
 
 /* Match Method section description to Hero paragraph */
-#method .section-title > p {
+#method .section-title>p {
   font-size: 17px !important;
   line-height: 1.85;
   font-weight: 400;
@@ -5018,13 +5033,13 @@ header nav a:hover {
 }
 
 @media (max-width: 760px) {
-  #method .section-title > p {
+  #method .section-title>p {
     font-size: 15px !important;
   }
 }
 
 /* Practices section description */
-#practices .section-title > p {
+#practices .section-title>p {
   font-size: 17px !important;
   line-height: 1.85;
   font-weight: 400;
@@ -5032,21 +5047,21 @@ header nav a:hover {
 }
 
 @media (max-width: 760px) {
-  #practices .section-title > p {
+  #practices .section-title>p {
     font-size: 15px !important;
   }
 }
 
 /* Consistent 18px descriptions for the main practice and coaching sections. */
-#method .section-title > p,
-#practices .section-title > p,
-#practices .practice-body > p,
-#coaching .feature-copy > p,
+#method .section-title>p,
+#practices .section-title>p,
+#practices .practice-body>p,
+#coaching .feature-copy>p,
 #coaching .feature-copy li,
-.coaching-journey .section-title > p,
+.coaching-journey .section-title>p,
 .coaching-journey .journey-cards h4,
-.coaching-journey .journey-cards article > p,
-.coaching-journey .hogan-note > p {
+.coaching-journey .journey-cards article>p,
+.coaching-journey .hogan-note>p {
   color: #263449 !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
@@ -5055,34 +5070,35 @@ header nav a:hover {
 }
 
 /* The method detail sits on a dark panel, so it keeps a light readable color. */
-#method .method-detail > p {
+#method .method-detail>p {
   color: #ffffff !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
 }
 
 @media (max-width: 760px) {
-  #method .section-title > p,
-  #practices .section-title > p,
-  #practices .practice-body > p,
-  #coaching .feature-copy > p,
+
+  #method .section-title>p,
+  #practices .section-title>p,
+  #practices .practice-body>p,
+  #coaching .feature-copy>p,
   #coaching .feature-copy li,
-  .coaching-journey .section-title > p,
+  .coaching-journey .section-title>p,
   .coaching-journey .journey-cards h4,
-  .coaching-journey .journey-cards article > p,
-  .coaching-journey .hogan-note > p,
-  #method .method-detail > p {
+  .coaching-journey .journey-cards article>p,
+  .coaching-journey .hogan-note>p,
+  #method .method-detail>p {
     font-size: 16px !important;
     line-height: 1.75 !important;
   }
 }
 
 /* Remaining practice, signature-method, and development descriptions. */
-#leadership-systems .split-heading > div:last-child > p,
-#leadership-systems .six-grid article > p,
+#leadership-systems .split-heading>div:last-child>p,
+#leadership-systems .six-grid article>p,
 #leadership-systems .signature-method p,
-#development .section-title > p,
-#development .development-grid article > p {
+#development .section-title>p,
+#development .development-grid article>p {
   color: #263449 !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
@@ -5091,28 +5107,29 @@ header nav a:hover {
 }
 
 @media (max-width: 760px) {
-  #leadership-systems .split-heading > div:last-child > p,
-  #leadership-systems .six-grid article > p,
+
+  #leadership-systems .split-heading>div:last-child>p,
+  #leadership-systems .six-grid article>p,
   #leadership-systems .signature-method p,
-  #development .section-title > p,
-  #development .development-grid article > p {
+  #development .section-title>p,
+  #development .development-grid article>p {
     font-size: 16px !important;
     line-height: 1.75 !important;
   }
 }
 
 /* Strategy, founder, team, advisory, and perspective descriptions. */
-#strategy-culture .split-heading > div:last-child > p,
-#strategy-culture .strategy-list > div > p,
-#founder.founder-layout > div > p,
-#team .section-title > p,
-#team .person-card > p,
-#team .person-card > small,
-#advisory .section-title > p,
-#advisory .person-card > p,
-#advisory .person-card > small,
-#perspectives .section-title > p,
-#perspectives .article-grid article > p {
+#strategy-culture .split-heading>div:last-child>p,
+#strategy-culture .strategy-list>div>p,
+#founder.founder-layout>div>p,
+#team .section-title>p,
+#team .person-card>p,
+#team .person-card>small,
+#advisory .section-title>p,
+#advisory .person-card>p,
+#advisory .person-card>small,
+#perspectives .section-title>p,
+#perspectives .article-grid article>p {
   color: #263449 !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
@@ -5121,25 +5138,26 @@ header nav a:hover {
 }
 
 @media (max-width: 760px) {
-  #strategy-culture .split-heading > div:last-child > p,
-  #strategy-culture .strategy-list > div > p,
-  #founder.founder-layout > div > p,
-  #team .section-title > p,
-  #team .person-card > p,
-  #team .person-card > small,
-  #advisory .section-title > p,
-  #advisory .person-card > p,
-  #advisory .person-card > small,
-  #perspectives .section-title > p,
-  #perspectives .article-grid article > p {
+
+  #strategy-culture .split-heading>div:last-child>p,
+  #strategy-culture .strategy-list>div>p,
+  #founder.founder-layout>div>p,
+  #team .section-title>p,
+  #team .person-card>p,
+  #team .person-card>small,
+  #advisory .section-title>p,
+  #advisory .person-card>p,
+  #advisory .person-card>small,
+  #perspectives .section-title>p,
+  #perspectives .article-grid article>p {
     font-size: 16px !important;
     line-height: 1.75 !important;
   }
 }
 
 /* FAQ answers and enquiry note use the same description typography. */
-.faq-section .faq-item > p,
-.contact-cta .wrap > small {
+.faq-section .faq-item>p,
+.contact-cta .wrap>small {
   color: #263449 !important;
   font-size: 18px !important;
   line-height: 1.8 !important;
@@ -5147,64 +5165,66 @@ header nav a:hover {
   opacity: 1 !important;
 }
 
-.contact-cta .wrap > small {
+.contact-cta .wrap>small {
   color: #ffffff !important;
 }
 
 @media (max-width: 760px) {
-  .faq-section .faq-item > p,
-  .contact-cta .wrap > small {
+
+  .faq-section .faq-item>p,
+  .contact-cta .wrap>small {
     font-size: 16px !important;
     line-height: 1.75 !important;
   }
 }
 
 /* Match all requested section descriptions to the primary hero paragraph. */
-.hero-content > p,
-#method .section-title > p,
-#practices .section-title > p,
-.coaching-journey .section-title > p,
-#leadership-systems .split-heading > div:last-child > p,
-#development .section-title > p,
-#strategy-culture .split-heading > div:last-child > p,
-#team .section-title > p,
-#advisory .section-title > p,
-.tedx-section > div > p,
-#perspectives .section-title > p {
+.hero-content>p,
+#method .section-title>p,
+#practices .section-title>p,
+.coaching-journey .section-title>p,
+#leadership-systems .split-heading>div:last-child>p,
+#development .section-title>p,
+#strategy-culture .split-heading>div:last-child>p,
+#team .section-title>p,
+#advisory .section-title>p,
+.tedx-section>div>p,
+#perspectives .section-title>p {
   font-size: 18px !important;
   line-height: 1.8 !important;
   font-weight: 400 !important;
 }
 
-.hero-content > p {
+.hero-content>p {
   color: #ffffff !important;
 }
 
-#method .section-title > p,
-#practices .section-title > p,
-.coaching-journey .section-title > p,
-#leadership-systems .split-heading > div:last-child > p,
-#development .section-title > p,
-#strategy-culture .split-heading > div:last-child > p,
-#team .section-title > p,
-#advisory .section-title > p,
-.tedx-section > div > p,
-#perspectives .section-title > p {
+#method .section-title>p,
+#practices .section-title>p,
+.coaching-journey .section-title>p,
+#leadership-systems .split-heading>div:last-child>p,
+#development .section-title>p,
+#strategy-culture .split-heading>div:last-child>p,
+#team .section-title>p,
+#advisory .section-title>p,
+.tedx-section>div>p,
+#perspectives .section-title>p {
   color: #263449 !important;
 }
 
 @media (max-width: 760px) {
-  .hero-content > p,
-  #method .section-title > p,
-  #practices .section-title > p,
-  .coaching-journey .section-title > p,
-  #leadership-systems .split-heading > div:last-child > p,
-  #development .section-title > p,
-  #strategy-culture .split-heading > div:last-child > p,
-  #team .section-title > p,
-  #advisory .section-title > p,
-  .tedx-section > div > p,
-  #perspectives .section-title > p {
+
+  .hero-content>p,
+  #method .section-title>p,
+  #practices .section-title>p,
+  .coaching-journey .section-title>p,
+  #leadership-systems .split-heading>div:last-child>p,
+  #development .section-title>p,
+  #strategy-culture .split-heading>div:last-child>p,
+  #team .section-title>p,
+  #advisory .section-title>p,
+  .tedx-section>div>p,
+  #perspectives .section-title>p {
     font-size: 16px !important;
     line-height: 1.75 !important;
   }
@@ -5236,12 +5256,12 @@ header nav a:hover {
   margin-bottom: 20px !important;
 }
 
-#founder.founder-layout > div > p:first-of-type {
+#founder.founder-layout>div>p:first-of-type {
   margin-top: 0 !important;
 }
 
 /* Perspective article category labels */
-#perspectives .article-grid article > small {
+#perspectives .article-grid article>small {
   display: block;
   color: #df245c !important;
   font-size: 13px !important;
@@ -5252,19 +5272,19 @@ header nav a:hover {
   margin-bottom: 8px !important;
 }
 
-#perspectives .article-grid article > h3 {
+#perspectives .article-grid article>h3 {
   margin-top: 0 !important;
   margin-bottom: 8px !important;
 }
 
-#perspectives .article-grid article > p {
+#perspectives .article-grid article>p {
   margin-top: 0 !important;
   padding-bottom: 10px !important;
 }
 
 /* Intro copy: keep both paragraphs at the same readable size. */
-.intro-copy > p,
-.intro-copy > p.large-copy {
+.intro-copy>p,
+.intro-copy>p.large-copy {
   font-size: 20px !important;
   line-height: 1.8 !important;
   font-weight: 400 !important;
@@ -5272,25 +5292,25 @@ header nav a:hover {
 }
 
 /* Application form readability */
-.application-page .application-hero-inner > p,
+.application-page .application-hero-inner>p,
 .application-page .application-good-to-know p,
-.application-page .application-section-heading > p {
+.application-page .application-section-heading>p {
   font-size: 18px !important;
   line-height: 1.8 !important;
   font-weight: 400 !important;
 }
 
-.application-page .application-field > span,
+.application-page .application-field>span,
 .application-page .application-field label,
 .application-page .choice-card label,
 .application-page .radio-options label,
 .application-page .application-consent,
 .application-page .application-before-submit,
 .application-page .application-before-submit p,
-.application-page .application-submit-row > p,
+.application-page .application-submit-row>p,
 .application-page .application-submit-row .button,
 .application-page .application-required-note,
-.application-page .application-field > small,
+.application-page .application-field>small,
 .application-page .choice-limit,
 .application-page .word-count,
 .application-page .file-selected,
@@ -5299,11 +5319,11 @@ header nav a:hover {
   line-height: 1.7 !important;
 }
 
-.application-page .application-field > small,
+.application-page .application-field>small,
 .application-page .choice-limit,
 .application-page .word-count,
 .application-page .application-required-note,
-.application-page .application-submit-row > p {
+.application-page .application-submit-row>p {
   color: #263449 !important;
   opacity: 1 !important;
 }
@@ -5314,9 +5334,10 @@ header nav a:hover {
 }
 
 @media (max-width: 760px) {
-  .application-page .application-hero-inner > p,
+
+  .application-page .application-hero-inner>p,
   .application-page .application-good-to-know p,
-  .application-page .application-section-heading > p {
+  .application-page .application-section-heading>p {
     font-size: 16px !important;
     line-height: 1.75 !important;
   }
@@ -5324,9 +5345,9 @@ header nav a:hover {
 
 /* Book page description and Chapter 1 form readability. */
 .book-hero p,
-.book-movements .section-title > p,
-.movement-grid article > p,
-.chapter-request > div > p {
+.book-movements .section-title>p,
+.movement-grid article>p,
+.chapter-request>div>p {
   font-size: 18px !important;
   line-height: 1.8 !important;
   font-weight: 400 !important;
@@ -5347,21 +5368,84 @@ header nav a:hover {
 }
 
 /* Keep all referenced descriptions on the same dark body text color. */
-.practice-body > p,
-.movement-grid article > p,
-#method .section-title > p,
-.coaching-journey .section-title > p,
-.podcast-details > p {
+.practice-body>p,
+.movement-grid article>p,
+#method .section-title>p,
+.coaching-journey .section-title>p,
+.podcast-details>p {
   color: #263449 !important;
 }
 
 @media (max-width: 760px) {
+
   .book-hero p,
-  .book-movements .section-title > p,
-  .movement-grid article > p,
-  .chapter-request > div > p {
+  .book-movements .section-title>p,
+  .movement-grid article>p,
+  .chapter-request>div>p {
     font-size: 16px !important;
     line-height: 1.75 !important;
   }
 }
 
+.header-logo {
+  width: 175px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .header-logo {
+    width: 165px;
+  }
+}
+
+/* Final header-logo constraint: prevent the source image from expanding the header. */
+.site-header>.wordmark>.header-logo {
+  width: 180px !important;
+  height: 83px !important;
+  max-width: 180px !important;
+  object-fit: contain;
+  object-position: left center;
+}
+
+@media (max-width: 760px) {
+  .site-header>.wordmark>.header-logo {
+    width: 145px !important;
+    height: 50px !important;
+    max-width: 145px !important;
+  }
+}
+
+/* Use the same image wordmark in the footer. */
+.footer-mark .footer-logo {
+  display: block;
+  width: 180px;
+  height: 83px;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.footer-mark>span,
+.footer-mark>small {
+  display: none;
+}
+
+.footer-mark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-mark .footer-logo {
+  margin-inline: auto;
+}
+
+@media (max-width: 760px) {
+  .footer-mark .footer-logo {
+    width: 145px;
+    height: 50px;
+  }
+}
