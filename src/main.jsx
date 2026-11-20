@@ -1213,10 +1213,10 @@ function Header({ onContact }) {
   return (
     <header className="site-header">
       <a className="wordmark" href="/">
-        <span>
-          career<span className="pink">shifts</span>
+        <span><span className="pink">
+          CAREER</span>SHIFTS
         </span>
-        <small>CONSULTING</small>
+        <small>DREAM DARE DO</small>
       </a>
 
       <button
@@ -1254,10 +1254,10 @@ function Footer({ onContact }) {
       <div className="footer-top">
         <div>
           <a className="wordmark footer-mark" href="/">
-            <span>
-              career<span className="pink">shifts</span>
+            <span><span className="pink">
+              CAREER</span>SHIFTS
             </span>
-            <small>CONSULTING</small>
+            <small>DREAM DARE DO</small>
           </a>
           <p>
             Leadership and organisational advisory, built on rigorous diagnosis
