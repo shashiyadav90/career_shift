@@ -1330,14 +1330,14 @@ function Footer({ onContact }) {
             target="_blank"
             rel="noreferrer"
           >
-            LinkedIn ↗
+            LinkedIn 🚀
           </a>
           <a
             href="https://www.youtube.com/@careershifts"
             target="_blank"
             rel="noreferrer"
           >
-            YouTube ↗
+            YouTube 🚀
           </a>
           <button onClick={onContact}>Start a Conversation 🚀</button>
         </div>
@@ -1595,7 +1595,7 @@ export default function App() {
                     <h3>{p[2]}</h3>
                     <p>{p[3]}</p>
                     <a href={p[5]}>
-                      Explore practice <b>↗</b>
+                      Explore practice <b>🚀</b>
                     </a>
                   </div>
                 </article>

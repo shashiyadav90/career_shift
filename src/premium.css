@@ -2246,10 +2246,14 @@ p {
 
 /* Problem rows: do not reserve space for the hidden decorative numbers. */
 .problem-row {
-  grid-template-columns: minmax(0, 1fr) 18px !important;
+  grid-template-columns: minmax(0, 1fr) !important;
 }
 
 .problem-row > span {
+  display: none !important;
+}
+
+.problem-row > b {
   display: none !important;
 }
 
@@ -2275,6 +2279,22 @@ p {
   flex: 1 1 auto !important;
   width: auto !important;
   min-width: 0 !important;
+}
+
+/* Keep the start-date field within the mobile form width. */
+.application-page .application-field input[type="date"] {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  box-sizing: border-box;
+  padding-left: 12px !important;
+  padding-right: 10px !important;
+}
+
+.application-page .application-field input[type="date"]::-webkit-calendar-picker-indicator {
+  margin: 0;
+  padding: 0;
 }
 
 /* Remove the decorative outer circles around social icons. */
