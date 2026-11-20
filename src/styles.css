@@ -5402,8 +5402,8 @@ header nav a:hover {
 
 /* Final header-logo constraint: prevent the source image from expanding the header. */
 .site-header>.wordmark>.header-logo {
-  width: 180px !important;
-  height: 83px !important;
+  width: 250px !important;
+  height: 92px !important;
   max-width: 180px !important;
   object-fit: contain;
   object-position: left center;
@@ -5421,7 +5421,7 @@ header nav a:hover {
 .footer-mark .footer-logo {
   display: block;
   width: 180px;
-  height: 83px;
+  height: 92px;
   max-width: 100%;
   object-fit: contain;
   object-position: left center;
